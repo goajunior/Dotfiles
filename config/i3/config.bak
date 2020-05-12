@@ -1,0 +1,171 @@
+set $mod Mod4
+
+
+font pango:hack 2, IconicIcons 9
+
+# This is what I use in ie config
+# custom variables for workspaces
+
+new_window pixel 3
+focus_follows_mouse  yes
+
+force_focus_wrapping yes
+
+set $based3    #002b36
+set $based2    #073642
+set $based1    #586e75
+set $based0    #657b83
+set $base0     #839496
+set $base1     #93a1a1
+set $base2     #eee8d5
+set $base3     #fdf6e3
+set $yellow    #b58900
+set $orange    #cb4b16
+set $red       #dc322f
+set $magenta   #d33682
+set $violet    #6c71c4
+set $blue      #268bd2
+set $cyan      #2aa198
+set $green     #859900
+
+
+client.focused            $based3   $yellow   $base3   $based3  $based2
+client.focused_inactive   $based3   $based3   $base0   $based3  $based3
+client.unfocused          $based3   $based3   $base0   $based3  $based3
+client.urgent             $based3   $magenta  $base3   $based3  $magenta
+
+
+floating_modifier $mod
+
+
+bindsym $mod+q kill
+
+bindsym $mod+r       exec dmenu_run -p run          -sb "$based1"  -nb "$based3" -nf "$based0" -fn pango-11
+bindsym $mod+w workspace 2:web; exec  firefox
+bindsym $mod+Return workspace 1:term; exec  termite
+bindsym $mod+x workspace 1:term; exec  xterm
+bindsym $mod+o workspace 3:others; exec  nautilus
+bindsym $mod+a workspace 3:others; exec  arandr
+bindsym $mod+u workspace 1:term; exec  urxvt
+bindsym $mod+y workspace 4:misc; exec  spotify
+bindsym $mod+g workspace 4:misc; exec  gitkraken
+bindsym Control+$mod+l exec xscreensaver-command -lock &
+bindsym Control+$mod+q exec /opt/qBackup/qBackup
+
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+bindsym $mod+c split h
+bindsym $mod+v split v
+
+bindsym $mod+f fullscreen
+
+bindsym $mod+n layout tabbed
+bindsym $mod+m layout toggle split
+
+bindsym $mod+d focus parent
+bindsym $mod+b focus child
+
+bindsym $mod+semicolon move workspace to output right
+
+bindsym $mod+Shift+f floating toggle
+
+#bindsym $mod+space focus mode_toggle
+
+bindsym $mod+6 workspace back_and_forth
+
+bindsym $mod+1 workspace 1:term
+bindsym $mod+2 workspace 2:web
+bindsym $mod+3 workspace 3:others
+bindsym $mod+4 workspace 4:misc
+
+bindsym $mod+Shift+1 move container to workspace 1:term
+bindsym $mod+Shift+2 move container to workspace 2:web
+bindsym $mod+Shift+3 move container to workspace 3:others
+bindsym $mod+Shift+4 move container to workspace 4:misc
+
+bindsym $mod+z reload
+bindsym $mod+Shift+x restart
+bindsym $mod+Shift+z exit
+
+mode "resize" {
+        bindsym h   resize shrink width 10 px or 10 ppt
+        bindsym j   resize grow height 10 px or 10 ppt
+        bindsym k   resize shrink height 10 px or 10 ppt
+        bindsym l   resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym q mode "default"
+        bindsym Escape mode "default"
+        bindcode Control+34 mode "default"
+}
+
+bindsym $mod+s mode "resize"
+
+bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master '3%+'"
+bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '1%-'"
+bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
+bindsym XF86AudioMicMute exec "amixer -D pulse sset Capture toggle"
+bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
+bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+bindsym $mod+space exec rofi -sidebar-mode -show run -line 3 -eh 2 -width 70 -padding 100 -opacity "70" -bw 0 -bc -font "FontAwesome 11" -rnow -no-disable-history -no-levenshtein-sort -only-match -kb-mode-next Ctrl+Tab 
+
+bindsym $mod+Shift+d exec "sh /home/junior/.screenlayout/macbook-air.sh"
+
+bindsym XF86WakeUp exec "synclient TouchpadOff=$(synclient | awk '/TouchpadOff/ {print ($3+1)%2}')"
+
+bindsym XF86Display exec "arandr"
+
+#bindsym $mod+a exec "st -e alsamixer"
+bindsym $mod+Shift+a exec "pavucontrol"
+
+exec_always --no-startup-id killall polybar; polybar main &
+#exec_always --no-startup-id killall polybar; polybar bottom &
+#bar {
+#        position top
+#        status_command i3blocks
+#        strip_workspace_numbers yes
+#        colors {
+#                statusline $based0
+#                background $based3
+#                focused_workspace $based3 $based3 $base3
+#                inactive_workspace $based3 $based2 $base0
+#                active_workspace $based3 $based2 $base3
+#                urgent_workspace $based3 $magenta $base2
+#       }
+#}
+##
+#bar {
+#        #position bottom
+#        status_command polybar bottom
+##        strip_workspace_numbers yes
+##        colors {
+##                statusline $based0
+##                background $based3
+##                focused_workspace $based3 $based3 $base3
+##                inactive_workspace $based3 $based2 $base0
+##                active_workspace $based3 $based2 $base3
+##                urgent_workspace $based3 $magenta $base2
+#        }
+#}
+
+exec --no-startup-id dropbox start
+exec --no-startup-id xscreensaver -no-splash
+exec gnome-settings-daemon
+exec_always --no-startup-id xfce4-power-manager
+exec "sh .screenlayout/casa-dell4k.sh"
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id udiskie -aT &
+exec redshift &
+exec mpd &
+exec --no-startup-id ympd &
+#exec --no-startup-id blueman-manager &
