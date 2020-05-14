@@ -191,6 +191,7 @@ credentials	config/polybar/gmail/auth.py	/^    credentials = storage.get()$/;"	v
 cw	config/nvim/mappings.vim	/^nnoremap cw ciw$/;"	m
 delay	config/rofimenu/rofimenu.config	/^delay() {$/;"	f
 did_python_syn_inits	config/nvim/syntax/python.vim	/^    let did_python_syn_inits = 1$/;"	v
+dirlist=	scripts/git_jumper	/^dirlist=()$/;"	f
 down	config/polybar/config.ini	/^scroll-down = bspwm-deskprev$/;"	k	section:bar/main
 dw	config/nvim/mappings.vim	/^nnoremap dw diw$/;"	m
 dynamic_smartcase	config/nvim/autocommands.vim	/^augroup dynamic_smartcase$/;"	a
@@ -348,6 +349,7 @@ label	config/i3/i3blocks.conf	/^label=$/;"	k	section:cpu_usage
 left	config/polybar/config.ini	/^modules-left = bspwm$/;"	k	section:bar/main
 loaded_gzip	config/nvim/variables.vim	/^let loaded_gzip = 1$/;"	v
 main	config/rofi/rofi-web-search.py	/^def main():$/;"	f
+main	install_files.py	/^def main():$/;"	f
 mapleader	config/nvim/variables.vim	/^let mapleader = ','$/;"	v
 markup	config/i3/i3blocks.conf	/^markup=pango$/;"	k
 match	config/polybar/config.ini	/^fuzzy-match = true$/;"	k	section:module/bspwm
@@ -372,6 +374,7 @@ project_id	config/polybar/gmail/client_secrets.json	/^    "project_id": "polybar
 python_space_error_highlight	config/nvim/syntax/python.vim	/^  let python_space_error_highlight = 1$/;"	v
 q;	config/nvim/mappings.vim	/^nnoremap q; q:$/;"	m
 radius	config/polybar/config.ini	/^radius = 0.0$/;"	k	section:bar/main
+recursive_copy	install_files.py	/^def recursive_copy(src, dst):$/;"	f
 redirect_uris	config/polybar/gmail/client_secrets.json	/^    "redirect_uris": ["urn:ietf:wg:oauth:2.0:oob"]$/;"	a	object:installed
 refresh_token	config/polybar/gmail/credentials.json	/^{"access_token": "ya29.Gl3iBjmyyDRJQO3drgJR1UN8KYcGYfR2na8aP-AoJ9OiBzbN3onE6g9TRTgKoxhiciTeynsMx/;"	s
 restack	config/polybar/config.ini	/^wm-restack = bspwm$/;"	k	section:bar/main
