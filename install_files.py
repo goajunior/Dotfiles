@@ -36,6 +36,8 @@ def main():
 
     shutil.copy2('zshrc', os.path.join(user_directory, '.zshrc'))
 
+    shutil.copy2('ackrc', os.path.join(user_directory, '.ackrc'))
+
 
 if __name__ == "__main__":
     main()
