@@ -122,6 +122,7 @@ export DYLD_LIBRARY_PATH=/usr/local/cuda/lib/:$DYLD_LIBRARY_PATH
 export TERM="xterm-256color"
 export box_name='rmbpro'
 export FZF_DEFAULT_COMMAND='ag -g ""'
+PROMPT_COMMAND='echo -ne "\033]0;${USER}: ${PWD}\007"'
 #
 #
 set -o vi

@@ -231,6 +231,8 @@ Plug 'tpope/vim-surround'
 " Add indent object for vim (useful for languages like Python)
 Plug 'michaeljsmith/vim-indent-object'
 
+Plug 'unblevable/quick-scope'
+
 "}}
 
 "{{ LaTeX editting and previewing plugin
@@ -948,6 +950,10 @@ let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
 let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
 let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+
+
+" Trigger a highlight in the appropriate direction when pressing these keys:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " let g:LanguageClient_serverCommands = { 'haskell': ['ghcide', '--lsp'] }
 "}}

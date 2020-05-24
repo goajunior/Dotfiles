@@ -19,4 +19,42 @@ snippet headera "cabeçalho arquivo de aula"
 # Name: George Ainsworth
 # Description: My First Project Program.
 endsnippet
+
+snippet plotinit "plot init"
+plot(numpy.linspace(${1:start}, ${2:end}, ${3:step}), ${4:variable})
+endsnippet
+
+snippet plottitle "title of the plot"
+title('${1:string}')	
+endsnippet
+
+snippet plotylable "label of y axis"
+ylabel('${1:string}')
+endsnippet
+
+snippet plotlegend "plot legend"
+legend()
+endsnippet
+
+snippet importmatplot "import matplotlib"
+from matplotlib import pyplot as plt
+endsnippet
+
+snippet setupproject "template for setup"
+from setuptools import setup
+
+setup(
+   name='${1:project name}',
+   version='${2:version}',
+   description='${3:description}',
+   author='George Ainsworth',
+   author_email='georgeainsworthjr@gmail.com',
+   packages=['$1'],  
+   install_requires=['bar', 'greek'], # external packages as dependencies
+)
+endsnippet
+	
+	
+	
+
 	

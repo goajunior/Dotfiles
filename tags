@@ -124,6 +124,7 @@ SCOPE	config/polybar/gmail/auth.py	/^SCOPE = 'https:\/\/www.googleapis.com\/auth
 SEARCH_ENGINE	config/rofi/rofi-web-search.py	/^SEARCH_ENGINE = 'google'    # or 'duckduckgo'$/;"	v
 Script arguments	config/polybar/gmail/readme.md	/^## Script arguments$/;"	s
 UpdateSkim	config/nvim/plugins.vim	/^        function! UpdateSkim(status)$/;"	f
+WindowTitleGroup	config/nvim/options.vim	/^augroup WindowTitleGroup$/;"	a
 Y	config/nvim/mappings.vim	/^nnoremap Y y\$$/;"	m
 [L	config/nvim/mappings.vim	/^nnoremap [L :lfirst<CR>zv$/;"	m
 [Q	config/nvim/mappings.vim	/^nnoremap [Q :cfirst<CR>zv$/;"	m
@@ -188,12 +189,10 @@ count_was	config/polybar/gmail/launch.py	/^count_was = 0$/;"	v
 cpu_usage	config/i3/i3blocks.conf	/^[cpu_usage]$/;"	s
 credentials	config/polybar/gmail/auth.py	/^    credentials = flow.step2_exchange(auth_code)$/;"	v
 credentials	config/polybar/gmail/auth.py	/^    credentials = storage.get()$/;"	v
-cw	config/nvim/mappings.vim	/^nnoremap cw ciw$/;"	m
 delay	config/rofimenu/rofimenu.config	/^delay() {$/;"	f
 did_python_syn_inits	config/nvim/syntax/python.vim	/^    let did_python_syn_inits = 1$/;"	v
 dirlist=	scripts/git_jumper	/^dirlist=()$/;"	f
 down	config/polybar/config.ini	/^scroll-down = bspwm-deskprev$/;"	k	section:bar/main
-dw	config/nvim/mappings.vim	/^nnoremap dw diw$/;"	m
 dynamic_smartcase	config/nvim/autocommands.vim	/^augroup dynamic_smartcase$/;"	a
 error_prefix	config/polybar/gmail/launch.py	/^error_prefix = '%{F' + args.color + '}\\uf06a %{F-}'$/;"	v
 expires_in	config/polybar/gmail/credentials.json	/^{"access_token": "ya29.Gl3iBjmyyDRJQO3drgJR1UN8KYcGYfR2na8aP-AoJ9OiBzbN3onE6g9TRTgKoxhiciTeynsMx/;"	n	object:token_response
@@ -298,6 +297,7 @@ g:nvim_system_wide	config/nvim/init.vim	/^let g:nvim_system_wide=0$/;"	v
 g:pandoc#syntax#conceal#urls	config/nvim/plugins.vim	/^let g:pandoc#syntax#conceal#urls = 1$/;"	v
 g:python3_host_prog	config/nvim/variables.vim	/^        let g:python3_host_prog=exepath('python')$/;"	v
 g:python3_host_prog	config/nvim/variables.vim	/^        let g:python3_host_prog=substitute(exepath('python'), '.exe$', '', 'g')$/;"	v
+g:qs_highlight_on_keys	config/nvim/plugins.vim	/^let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']$/;"	v
 g:semshi#error_sign	config/nvim/plugins.vim	/^let g:semshi#error_sign=v:false$/;"	v
 g:semshi#mark_selected_nodes	config/nvim/plugins.vim	/^let g:semshi#mark_selected_nodes=0$/;"	v
 g:signify_sign_change	config/nvim/plugins.vim	/^let g:signify_sign_change = '~'$/;"	v
@@ -348,6 +348,7 @@ label	config/i3/i3blocks.conf	/^label=$/;"	k	section:mediaplayer
 label	config/i3/i3blocks.conf	/^label=$/;"	k	section:cpu_usage
 left	config/polybar/config.ini	/^modules-left = bspwm$/;"	k	section:bar/main
 loaded_gzip	config/nvim/variables.vim	/^let loaded_gzip = 1$/;"	v
+main	backup_files.py	/^def main():$/;"	f
 main	config/rofi/rofi-web-search.py	/^def main():$/;"	f
 main	install_files.py	/^def main():$/;"	f
 mapleader	config/nvim/variables.vim	/^let mapleader = ','$/;"	v

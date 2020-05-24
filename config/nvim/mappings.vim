@@ -178,9 +178,6 @@ nnoremap c "_c
 nnoremap C "_C
 nnoremap cc "_cc
 
-nnoremap dw diw
-nnoremap cw ciw
-
 " Remove trailing whitespace characters
 nnoremap <silent> <leader><Space> :call utils#StripTrailingWhitespaces()<CR>
 
