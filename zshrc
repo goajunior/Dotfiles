@@ -142,7 +142,7 @@ utf8()
 			}
 alias ls=exa
 alias apps='open /Applications'
-alias gh='/Applications/Github\ Desktop.app; open .; cd -'
+# alias gh='/Applications/Github\ Desktop.app; open .; cd -'
 alias ffp='freefem++'
 alias killstatus='killall -KILL SystemUIServer'
 
@@ -290,3 +290,4 @@ fb() {
         buku -o "$index"
     done
 }
+eval "$(gh completion -s zsh)"

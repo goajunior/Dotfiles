@@ -44,12 +44,8 @@ Plug 'osyo-manga/vim-anzu'
 Plug 'haya14busa/vim-asterisk'
 
 " File search, tag search and more
-if g:is_win
-    Plug 'Yggdroot/LeaderF'
-else
-    Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-endif
-
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 " Another similar plugin is command-t
 " Plug 'wincent/command-t'
 
@@ -447,6 +443,8 @@ let g:indentguides_tabchar = '|'
 let g:Lf_DefaultExternalTool = "ag"
 
 let g:Lf_WindowPosition = 'popup'
+
+let g:Lf_PreviewInPopup = 1
 "}}
 
 "{{ Search related
@@ -500,11 +498,15 @@ let g:Lf_WildIgnore = {
     \}
 
 " Search files in popup window
-nnoremap <silent> <leader>f :Leaderf file <CR>
-nnoremap <silent> <leader>t :Leaderf  bufTag <CR>
-nnoremap <silent> <leader>m :Leaderf  mru <CR>
-nnoremap <silent> <leader>rg :Leaderf  rg <CR>
-nnoremap <silent> <leader>lf :Leaderf 
+nnoremap <silent> <leader>f :Files <CR>
+nnoremap <silent> <leader>t :Tags <CR>
+nnoremap <silent> <leader>bt :BTags <CR>
+nnoremap <silent> <leader>m :History <CR>
+nnoremap <silent> <leader>rg :Rg <CR>
+nnoremap <silent> <leader>gf :GFiles <CR> 
+nnoremap <silent> <leader>l :Lines <CR> 
+nnoremap <silent> <leader>bl :BLines <CR> 
+let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.4, 'yoffset': 1, 'border': 'horizontal' } }
 "}}
 
 "{{ URL related
