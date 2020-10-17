@@ -66,21 +66,24 @@ $	config/nvim/mappings.vim	/^xnoremap $ g_$/;"	m
 <leader>P	config/nvim/mappings.vim	/^nnoremap <leader>P m`O<ESC>p``$/;"	m
 <leader>Q	config/nvim/mappings.vim	/^nnoremap <silent> <leader>Q :qa<CR>$/;"	m
 <leader>W	config/nvim/mappings.vim	/^nnoremap <silent> <leader>W :update<CR>$/;"	m
+<leader>bl	config/nvim/plugins.vim	/^nnoremap <silent> <leader>bl :BLines <CR> $/;"	m
+<leader>bt	config/nvim/plugins.vim	/^nnoremap <silent> <leader>bt :BTags <CR>$/;"	m
 <leader>cd	config/nvim/mappings.vim	/^nnoremap <silent> <leader>cd :lcd %:p:h<CR>:pwd<CR>$/;"	m
 <leader>dp	config/nvim/plugins.vim	/^nnoremap <leader>dp :GdbStartPDB python -m pdb %<CR>$/;"	m
 <leader>ev	config/nvim/mappings.vim	/^nnoremap <silent> <leader>ev :tabnew $MYVIMRC <bar> tcd %:h<cr>$/;"	m
-<leader>f	config/nvim/plugins.vim	/^nnoremap <silent> <leader>f :Leaderf file <CR>$/;"	m
+<leader>f	config/nvim/plugins.vim	/^nnoremap <silent> <leader>f :Files <CR>$/;"	m
 <leader>gT	config/nvim/plugins.vim	/^nmap <leader>gT <Plug>TitlecaseLine$/;"	m
+<leader>gf	config/nvim/plugins.vim	/^nnoremap <silent> <leader>gf :GFiles <CR> $/;"	m
 <leader>gt	config/nvim/plugins.vim	/^nmap <leader>gt <Plug>Titlecase$/;"	m
 <leader>gt	config/nvim/plugins.vim	/^vmap <leader>gt <Plug>Titlecase$/;"	m
-<leader>lf	config/nvim/plugins.vim	/^nnoremap <silent> <leader>lf :Leaderf $/;"	m
-<leader>m	config/nvim/plugins.vim	/^nnoremap <silent> <leader>m :Leaderf  mru <CR>$/;"	m
+<leader>l	config/nvim/plugins.vim	/^nnoremap <silent> <leader>l :Lines <CR> $/;"	m
+<leader>m	config/nvim/plugins.vim	/^nnoremap <silent> <leader>m :History <CR>$/;"	m
 <leader>p	config/nvim/mappings.vim	/^nnoremap <leader>p m`o<ESC>p``$/;"	m
 <leader>q	config/nvim/mappings.vim	/^nnoremap <silent> <leader>q :x<CR>$/;"	m
-<leader>rg	config/nvim/plugins.vim	/^nnoremap <silent> <leader>rg :Leaderf  rg <CR>$/;"	m
+<leader>rg	config/nvim/plugins.vim	/^nnoremap <silent> <leader>rg :Rg <CR>$/;"	m
 <leader>st	config/nvim/mappings.vim	/^nnoremap <silent> <leader>st :call utils#SynGroup()<CR>$/;"	m
 <leader>sv	config/nvim/mappings.vim	/^nnoremap <silent> <leader>sv :silent update $MYVIMRC <bar> source $MYVIMRC <bar>$/;"	m
-<leader>t	config/nvim/plugins.vim	/^nnoremap <silent> <leader>t :Leaderf  bufTag <CR>$/;"	m
+<leader>t	config/nvim/plugins.vim	/^nnoremap <silent> <leader>t :Tags <CR>$/;"	m
 <leader>v	config/nvim/mappings.vim	/^nnoremap <leader>v `[V`]$/;"	m
 <leader>wh	config/nvim/mappings.vim	/^nmap <leader>wh <c-w>s$/;"	m
 <leader>wv	config/nvim/mappings.vim	/^nmap <leader>wv <c-w>v$/;"	m
@@ -204,6 +207,7 @@ g#	config/nvim/plugins.vim	/^nmap g# <Plug>(asterisk-gz#)<Plug>(is-nohl-1)$/;"	m
 g*	config/nvim/plugins.vim	/^nmap g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)$/;"	m
 g:LanguageClient_serverCommands	config/nvim/plugins.vim	/^let g:LanguageClient_serverCommands = {$/;"	v
 g:Lf_DefaultExternalTool	config/nvim/plugins.vim	/^let g:Lf_DefaultExternalTool = "ag"$/;"	v
+g:Lf_PreviewInPopup	config/nvim/plugins.vim	/^let g:Lf_PreviewInPopup = 1$/;"	v
 g:Lf_UseCache	config/nvim/plugins.vim	/^let g:Lf_UseCache = 0$/;"	v
 g:Lf_WildIgnore	config/nvim/plugins.vim	/^let g:Lf_WildIgnore = {$/;"	v
 g:Lf_WindowPosition	config/nvim/plugins.vim	/^let g:Lf_WindowPosition = 'popup'$/;"	v
@@ -255,6 +259,7 @@ g:floaterm_keymap_new	config/nvim/plugins.vim	/^let g:floaterm_keymap_new    = '
 g:floaterm_keymap_next	config/nvim/plugins.vim	/^let g:floaterm_keymap_next   = '<F9>'$/;"	v
 g:floaterm_keymap_prev	config/nvim/plugins.vim	/^let g:floaterm_keymap_prev   = '<F8>'$/;"	v
 g:floaterm_keymap_toggle	config/nvim/plugins.vim	/^let g:floaterm_keymap_toggle = '<F10>'$/;"	v
+g:fzf_layout	config/nvim/plugins.vim	/^let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.4, 'yoffset': 1, 'border': 'horizontal'/;"	v
 g:gruvbox_filetype_hi_groups	config/nvim/ui.vim	/^    let g:gruvbox_filetype_hi_groups = 0$/;"	v
 g:gruvbox_italicize_strings	config/nvim/ui.vim	/^    let g:gruvbox_italicize_strings=1$/;"	v
 g:gruvbox_italics	config/nvim/ui.vim	/^    let g:gruvbox_italics=1$/;"	v

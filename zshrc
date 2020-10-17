@@ -182,8 +182,9 @@ alias vimt='vim ~/.tmux.conf'
 alias vimd='vim ~/code/Docker/Dockerfile'
 alias ms='MathematicaScript'
 alias hsn='h|grep'
-alias dockerm='docker run -u junior -t -i minha_imagem:v1'
+alias dockerm='docker run -p 8888:8888  -v ~/container:/home/jovyan/work -it wolfram-jupyter'
 alias exa='exa --group-directories-first --icons'
+alias startdocker="sudo systemctl start docker.service"
 # alias ack='ack --pager="less -FRSX"'
 
 CTAGS=--langmap=fortran:+.f90

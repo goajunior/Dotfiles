@@ -25,506 +25,508 @@ Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 " Python indent (follows the PEP8 style)
 Plug 'Vimjas/vim-python-pep8-indent', {'for': 'python'}
 
-" Python-related text object
-Plug 'jeetsukumaran/vim-pythonsense'
-"}}
-
-"{{ Search related plugins
-" Super fast movement with vim-sneak
-" Plug 'justinmk/vim-sneak'
-
-" Improve vim incsearch, clear search highlight automatically
-Plug 'haya14busa/is.vim'
-Plug 'PeterRincker/vim-searchlight'
-
-" Show match number for incsearch
-Plug 'osyo-manga/vim-anzu'
-
-" Stay after pressing * and search selected text
-Plug 'haya14busa/vim-asterisk'
-
-" File search, tag search and more
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-" Another similar plugin is command-t
-" Plug 'wincent/command-t'
-
-" Another grep tool (similar to Sublime Text Ctrl+Shift+F)
-" Plug 'dyng/ctrlsf.vim'
-
-" A greping tool
-" Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
-"}}
-
-"{{ UI: Color, theme etc.
-" A list of colorscheme plugin you may want to try. Find what suits you.
-Plug 'lifepillar/vim-gruvbox8'
-Plug 'srcery-colors/srcery-vim'
-Plug 'ayu-theme/ayu-vim'
-Plug 'sjl/badwolf'
-Plug 'ajmwagar/vim-deus'
-Plug 'sainnhe/vim-color-desert-night'
-Plug 'YorickPeterse/happy_hacking.vim'
-Plug 'lifepillar/vim-solarized8'
-Plug 'sickill/vim-monokai'
-Plug 'joshdick/onedark.vim'
-" Plug 'whatyouhide/vim-gotham'
-" Plug 'rakr/vim-one'
-" Plug 'kaicataldo/material.vim'
-
-if !exists('g:started_by_firenvim')
-    " colorful status line and theme
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'mhinz/vim-startify'
-endif
-"}}
-
-"{{ Plugin to deal with URL
-" Highlight URLs inside vim
-Plug 'itchyny/vim-highlighturl'
-
-" For Windows and Mac, we can open an URL in the browser. For Linux, it may
-" not be possible since we maybe in a server which disables GUI.
-if g:is_win || g:is_mac
-    " open URL in browser
-    Plug 'tyru/open-browser.vim'
-endif
-"}}
-
-"{{ Navigation and tags plugin
-" File explorer for vim
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-
-" Only install these plugins if ctags are installed on the system
-if executable('ctags')
-    " plugin to manage your tags
-    Plug 'ludovicchabant/vim-gutentags'
-    " show file tags in vim window
-    Plug 'majutsushi/tagbar', { 'on': ['TagbarToggle', 'TagbarOpen'] }
-endif
-"}}
-
-"{{ File editting plugin
-" Snippet engine and snippet template
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
-" Automatic insertion and deletion of a pair of characters
-Plug 'jiangmiao/auto-pairs'
-
-" Comment plugin
-Plug 'tpope/vim-commentary'
-
-" Multiple cursor plugin like Sublime Text?
-" Plug 'mg979/vim-visual-multi'
-
-" Title character case
-Plug 'christoomey/vim-titlecase'
-
-" Autosave files on certain events
-Plug '907th/vim-auto-save'
-
-" graphcial undo history, see https://github.com/mbbill/undotree
-Plug 'mbbill/undotree'
+    " Python-related text object
+    Plug 'jeetsukumaran/vim-pythonsense'
+    "}}
+
+    "{{ Search related plugins
+    " Super fast movement with vim-sneak
+    " Plug 'justinmk/vim-sneak'
+
+    " Improve vim incsearch, clear search highlight automatically
+    Plug 'haya14busa/is.vim'
+    Plug 'PeterRincker/vim-searchlight'
+
+    " Show match number for incsearch
+    Plug 'osyo-manga/vim-anzu'
+
+    " Stay after pressing * and search selected text
+    Plug 'haya14busa/vim-asterisk'
+
+    " File search, tag search and more
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    " Another similar plugin is command-t
+    " Plug 'wincent/command-t'
+
+    " Another grep tool (similar to Sublime Text Ctrl+Shift+F)
+    " Plug 'dyng/ctrlsf.vim'
+
+    " A greping tool
+    " Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
+    "}}
+
+    "{{ UI: Color, theme etc.
+    " A list of colorscheme plugin you may want to try. Find what suits you.
+    Plug 'lifepillar/vim-gruvbox8'
+    Plug 'srcery-colors/srcery-vim'
+    Plug 'ayu-theme/ayu-vim'
+    Plug 'sjl/badwolf'
+    Plug 'ajmwagar/vim-deus'
+    Plug 'sainnhe/vim-color-desert-night'
+    Plug 'YorickPeterse/happy_hacking.vim'
+    Plug 'lifepillar/vim-solarized8'
+    Plug 'sickill/vim-monokai'
+    Plug 'joshdick/onedark.vim'
+    " Plug 'whatyouhide/vim-gotham'
+    " Plug 'rakr/vim-one'
+    " Plug 'kaicataldo/material.vim'
+
+    if !exists('g:started_by_firenvim')
+        " colorful status line and theme
+        Plug 'vim-airline/vim-airline'
+        Plug 'vim-airline/vim-airline-themes'
+        Plug 'mhinz/vim-startify'
+    endif
+    "}}
+
+    "{{ Plugin to deal with URL
+    " Highlight URLs inside vim
+    Plug 'itchyny/vim-highlighturl'
+
+    " For Windows and Mac, we can open an URL in the browser. For Linux, it may
+    " not be possible since we maybe in a server which disables GUI.
+    if g:is_win || g:is_mac
+        " open URL in browser
+        Plug 'tyru/open-browser.vim'
+    endif
+    "}}
+
+    "{{ Navigation and tags plugin
+    " File explorer for vim
+    Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+
+    " Only install these plugins if ctags are installed on the system
+    if executable('ctags')
+        " plugin to manage your tags
+        Plug 'ludovicchabant/vim-gutentags'
+        " show file tags in vim window
+        Plug 'majutsushi/tagbar', { 'on': ['TagbarToggle', 'TagbarOpen'] }
+    endif
+    "}}
+
+    "{{ File editting plugin
+    " Snippet engine and snippet template
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
+
+    " Automatic insertion and deletion of a pair of characters
+    Plug 'jiangmiao/auto-pairs'
+
+    " Comment plugin
+    Plug 'tpope/vim-commentary'
+
+    " Multiple cursor plugin like Sublime Text?
+    " Plug 'mg979/vim-visual-multi'
+
+    " Title character case
+    Plug 'christoomey/vim-titlecase'
+
+    " Autosave files on certain events
+    Plug '907th/vim-auto-save'
+
+    " graphcial undo history, see https://github.com/mbbill/undotree
+    Plug 'mbbill/undotree'
 
-" another plugin to show undo history
-" Plug 'simnalamburt/vim-mundo'
+    " another plugin to show undo history
+    " Plug 'simnalamburt/vim-mundo'
 
-" Manage your yank history
-if g:is_linux || g:is_mac
-    Plug 'svermeulen/vim-yoink'
-endif
+    " Manage your yank history
+    if g:is_linux || g:is_mac
+        Plug 'svermeulen/vim-yoink'
+    endif
 
-" Show marks in sign column for quicker navigation
-Plug 'kshenoy/vim-signature'
+    " Show marks in sign column for quicker navigation
+    Plug 'kshenoy/vim-signature'
 
-" Another good plugin to show signature
-" Plug 'jeetsukumaran/vim-markology'
+    " Another good plugin to show signature
+    " Plug 'jeetsukumaran/vim-markology'
 
-" Handy unix command inside Vim (Rename, Move etc.)
-Plug 'tpope/vim-e unuch'
+    " Handy unix command inside Vim (Rename, Move etc.)
+    Plug 'tpope/vim-e unuch'
 
-" Repeat vim motions
-Plug 'tpope/vim-repeat'
+    " Repeat vim motions
+    Plug 'tpope/vim-repeat'
 
-Plug 'thaerkh/vim-indentguides'
+    Plug 'thaerkh/vim-indentguides'
 
-" Show the content of register in preview window
-" Plug 'junegunn/vim-peekaboo'
+    " Show the content of register in preview window
+    " Plug 'junegunn/vim-peekaboo'
 
-" IME toggle for Mac
-if g:is_mac
-    Plug 'rlue/vim-barbaric'
-endif
-"}}
+    " IME toggle for Mac
+    if g:is_mac
+        Plug 'rlue/vim-barbaric'
+    endif
+    "}}
 
-"{{ Linting, formating
-" Syntax check and make
-" Plug 'neomake/neomake'
+    "{{ Linting, formating
+    " Syntax check and make
+    " Plug 'neomake/neomake'
 
-" Another linting plugin
-Plug 'dense-analysis/ale'
+    " Another linting plugin
+    Plug 'dense-analysis/ale'
 
-" Auto format tools
-Plug 'sbdchd/neoformat', { 'on': 'Neoformat' }
-" Plug 'Chiel92/vim-autoformat'
-"}}
+    " Auto format tools
+    Plug 'sbdchd/neoformat', { 'on': 'Neoformat' }
+    " Plug 'Chiel92/vim-autoformat'
+    "}}
 
-"{{ Git related plugins
-" Show git change (change, delete, add) signs in vim sign column
-Plug 'mhinz/vim-signify'
-" Another similar plugin
-" Plug 'airblade/vim-gitgutter'
+    "{{ Git related plugins
+    " Show git change (change, delete, add) signs in vim sign column
+    Plug 'mhinz/vim-signify'
+    " Another similar plugin
+    " Plug 'airblade/vim-gitgutter'
 
-" Git command inside vim
-Plug 'tpope/vim-fugitive', {'on': ['Gstatus']}
+    " Git command inside vim
+    Plug 'tpope/vim-fugitive', {'on': ['Gstatus']}
 
-" Git commit browser
-Plug 'junegunn/gv.vim', { 'on': 'GV' }
-"}}
+    " Git commit browser
+    Plug 'junegunn/gv.vim', { 'on': 'GV' }
+    "}}
 
-"{{ Plugins for markdown writing
-" Distraction free writing
-Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+    "{{ Plugins for markdown writing
+    " Distraction free writing
+    Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 
-" Only light on your cursor line to help you focus
-Plug 'junegunn/limelight.vim', {'for': 'markdown'}
+    " Only light on your cursor line to help you focus
+    Plug 'junegunn/limelight.vim', {'for': 'markdown'}
 
-" Markdown syntax highlighting
-Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'markdown' }
+    " Markdown syntax highlighting
+    Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'markdown' }
 
-" Another markdown plugin
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+    " Another markdown plugin
+    Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
-" Faster footnote generation
-Plug 'vim-pandoc/vim-markdownfootnotes', { 'for': 'markdown' }
+    " Faster footnote generation
+    Plug 'vim-pandoc/vim-markdownfootnotes', { 'for': 'markdown' }
 
-" Vim tabular plugin for manipulate tabular, required by markdown plugins
-Plug 'godlygeek/tabular', {'on': 'Tabularize'}
+    " Vim tabular plugin for manipulate tabular, required by markdown plugins
+    Plug 'godlygeek/tabular', {'on': 'Tabularize'}
 
-" Markdown JSON header highlight plugin
-Plug 'elzr/vim-json', { 'for': ['json', 'markdown'] }
+    " Markdown JSON header highlight plugin
+    Plug 'elzr/vim-json', { 'for': ['json', 'markdown'] }
 
-" Markdown previewing (only for Mac and Windows)
-if g:is_win || g:is_mac
-    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] }
-endif
+    " Markdown previewing (only for Mac and Windows)
+    if g:is_win || g:is_mac
+        Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] }
+    endif
 
-" emoji
-" Plug 'https://gitlab.com/gi1242/vim-emoji-ab'
-Plug 'fszymanski/deoplete-emoji', {'for': 'markdown'}
-"}}
+    " emoji
+    " Plug 'https://gitlab.com/gi1242/vim-emoji-ab'
+    Plug 'fszymanski/deoplete-emoji', {'for': 'markdown'}
+    "}}
 
-"{{ Text object plugins
-" Additional powerful text object for vim, this plugin should be studied
-" carefully to use its full power
-Plug 'wellle/targets.vim'
+    "{{ Text object plugins
+    " Additional powerful text object for vim, this plugin should be studied
+    " carefully to use its full power
+    Plug 'wellle/targets.vim'
 
-" Plugin to manipulate characer pairs quickly
-Plug 'tpope/vim-surround'
+    " Plugin to manipulate characer pairs quickly
+    Plug 'tpope/vim-surround'
 
-" Add indent object for vim (useful for languages like Python)
-Plug 'michaeljsmith/vim-indent-object'
+    " Add indent object for vim (useful for languages like Python)
+    Plug 'michaeljsmith/vim-indent-object'
 
-Plug 'unblevable/quick-scope'
+    Plug 'unblevable/quick-scope'
 
-"}}
+    "}}
 
-"{{ LaTeX editting and previewing plugin
-" Only use these plugin on Windows and Mac and when LaTeX is installed
-if ( g:is_win || g:is_mac ) && executable('latex')
-    " vimtex use autoload feature of Vim, so it is not necessary to use `for`
-    " keyword of vim-plug to try to lazy-load it,
-    " see https://github.com/junegunn/vim-plug/issues/785
-    Plug 'lervag/vimtex'
+    "{{ LaTeX editting and previewing plugin
+    " Only use these plugin on Windows and Mac and when LaTeX is installed
+    if ( g:is_win || g:is_mac ) && executable('latex')
+        " vimtex use autoload feature of Vim, so it is not necessary to use `for`
+        " keyword of vim-plug to try to lazy-load it,
+        " see https://github.com/junegunn/vim-plug/issues/785
+        Plug 'lervag/vimtex'
 
-    " Plug 'matze/vim-tex-fold', {'for': 'tex'}
-    " Plug 'Konfekt/FastFold'
-endif
-"}}
+        " Plug 'matze/vim-tex-fold', {'for': 'tex'}
+        " Plug 'Konfekt/FastFold'
+    endif
+    "}}
 
-"{{ Tmux related plugins
-" Since tmux is only available on Linux and Mac, we only enable these plugins
-" for Linux and Mac
-if (g:is_linux || g:is_mac) && executable('tmux')
-    " Let vim detect tmux focus event correctly, see
-    " https://github.com/neovim/neovim/issues/9486 and
-    " https://vi.stackexchange.com/q/18515/15292
-    Plug 'tmux-plugins/vim-tmux-focus-events'
+    "{{ Tmux related plugins
+    " Since tmux is only available on Linux and Mac, we only enable these plugins
+    " for Linux and Mac
+    if (g:is_linux || g:is_mac) && executable('tmux')
+        " Let vim detect tmux focus event correctly, see
+        " https://github.com/neovim/neovim/issues/9486 and
+        " https://vi.stackexchange.com/q/18515/15292
+        Plug 'tmux-plugins/vim-tmux-focus-events'
 
-    " .tmux.conf syntax highlighting and setting check
-    Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
-endif
-"}}
+        " .tmux.conf syntax highlighting and setting check
+        Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
+    endif
+    "}}
 
-"{{ HTML related
-Plug 'mattn/emmet-vim'
-"}}
+    "{{ HTML related
+    Plug 'mattn/emmet-vim'
+    "}}
 
-"{{ Misc plugins
-" Automatically toggle line number based on several conditions
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
+    "{{ Misc plugins
+    " Automatically toggle line number based on several conditions
+    Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
-" Highlight yanked region
-Plug 'machakann/vim-highlightedyank'
+    " Highlight yanked region
+    Plug 'machakann/vim-highlightedyank'
 
-" Modern matchit implementation
-Plug 'andymass/vim-matchup'
+    " Modern matchit implementation
+    Plug 'andymass/vim-matchup'
 
-" Simulating smooth scroll motions with physcis
-Plug 'yuttie/comfortable-motion.vim'
+    " Simulating smooth scroll motions with physcis
+    Plug 'yuttie/comfortable-motion.vim'
 
-Plug 'tpope/vim-scriptease'
+    Plug 'tpope/vim-scriptease'
 
-" Asynchronous command execution
-Plug 'skywind3000/asyncrun.vim'
-" Another asynchronous plugin
-" Plug 'tpope/vim-dispatch'
-Plug 'cespare/vim-toml'
+    " Asynchronous command execution
+    Plug 'skywind3000/asyncrun.vim'
+    " Another asynchronous plugin
+    " Plug 'tpope/vim-dispatch'
+    Plug 'cespare/vim-toml'
 
-" Edit text area in browser using nvim
-if g:is_mac || g:is_win
-    Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-endif
+    " Edit text area in browser using nvim
+    if g:is_mac || g:is_win
+        Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+    endif
 
-" Debugger plugin
-if g:is_mac || g:is_linux
-    Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh \| UpdateRemotePlugins' }
-endif
+    " Debugger plugin
+    if g:is_mac || g:is_linux
+        Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh \| UpdateRemotePlugins' }
+    endif
 
-Plug 'easymotion/vim-easymotion'
+    Plug 'easymotion/vim-easymotion'
 
-Plug 'voldikss/vim-floaterm'
+    Plug 'voldikss/vim-floaterm'
 
-Plug 'junegunn/vim-peekaboo'
+    Plug 'junegunn/vim-peekaboo'
 
-"muda S] na selecao coloca [ ]  automaticamente yss) ou yss] na linha
-Plug 'tpope/vim-surround'
+    "muda S] na selecao coloca [ ]  automaticamente yss) ou yss] na linha
+    Plug 'tpope/vim-surround'
 
-Plug 'mhinz/vim-grepper'
-"
-"necessario para o gist-vim
-Plug 'mattn/webapi-vim'
+    Plug 'mhinz/vim-grepper'
+    "
+    "necessario para o gist-vim
+    Plug 'mattn/webapi-vim'
 
-"github gists :Gist adiciona o buffer atual no gist :Gist -l lista os gists
-Plug 'mattn/gist-vim'
+    "github gists :Gist adiciona o buffer atual no gist :Gist -l lista os gists
+    Plug 'mattn/gist-vim'
 
-Plug 'craigemery/vim-autotag'
+    Plug 'craigemery/vim-autotag'
 
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': './install.sh'
-    \ }
+    Plug 'autozimu/LanguageClient-neovim', {
+        \ 'branch': 'next',
+        \ 'do': './install.sh'
+        \ }
 
-Plug 'sheerun/vim-polyglot'
+    Plug 'sheerun/vim-polyglot'
 
-Plug 'neovimhaskell/haskell-vim'
+    Plug 'neovimhaskell/haskell-vim'
 
-call plug#end()
-"}}
-"}
+    Plug 'liuchengxu/vim-which-key'
 
-"{ Plugin settings
-"{{ Vim-plug settings
-" Use shortnames for common vim-plug command to reduce typing.
-" To use these shortcut: first activate command line with `:`, then input the
-" short alias, e.g., `pi`, then press <space>, the alias will be expanded
-" to the full command automatically
-call utils#Cabbrev('pi', 'PlugInstall')
-call utils#Cabbrev('pud', 'PlugUpdate')
-call utils#Cabbrev('pug', 'PlugUpgrade')
-call utils#Cabbrev('ps', 'PlugStatus')
-call utils#Cabbrev('pc', 'PlugClean')
-"}}
+    call plug#end()
+    "}}
+    "}
 
-"{{ Auto-completion related
-"""""""""""""""""""""""""""" deoplete settings""""""""""""""""""""""""""
-" Wheter to enable deoplete automatically after start nvim
-let g:deoplete#enable_at_startup = 1
+    "{ Plugin settings
+    "{{ Vim-plug settings
+    " Use shortnames for common vim-plug command to reduce typing.
+    " To use these shortcut: first activate command line with `:`, then input the
+    " short alias, e.g., `pi`, then press <space>, the alias will be expanded
+    " to the full command automatically
+    call utils#Cabbrev('pi', 'PlugInstall')
+    call utils#Cabbrev('pud', 'PlugUpdate')
+    call utils#Cabbrev('pug', 'PlugUpgrade')
+    call utils#Cabbrev('ps', 'PlugStatus')
+    call utils#Cabbrev('pc', 'PlugClean')
+    "}}
 
-" Maximum candidate window width
-call deoplete#custom#source('_', 'max_menu_width', 80)
+    "{{ Auto-completion related
+    """""""""""""""""""""""""""" deoplete settings""""""""""""""""""""""""""
+    " Wheter to enable deoplete automatically after start nvim
+    let g:deoplete#enable_at_startup = 1
 
-" Minimum character length needed to activate auto-completion.
-call deoplete#custom#source('_', 'min_pattern_length', 1)
+    " Maximum candidate window width
+    call deoplete#custom#source('_', 'max_menu_width', 80)
 
-" Whether to disable completion for certain syntax
-" call deoplete#custom#source('_', {
-"     \ 'filetype': ['vim'],
-"     \ 'disabled_syntaxes': ['String']
-"     \ })
-call deoplete#custom#source('_', {
-    \ 'filetype': ['python'],
-    \ 'disabled_syntaxes': ['Comment']
+    " Minimum character length needed to activate auto-completion.
+    call deoplete#custom#source('_', 'min_pattern_length', 1)
+
+    " Whether to disable completion for certain syntax
+    " call deoplete#custom#source('_', {
+    "     \ 'filetype': ['vim'],
+    "     \ 'disabled_syntaxes': ['String']
+    "     \ })
+    call deoplete#custom#source('_', {
+        \ 'filetype': ['python'],
+        \ 'disabled_syntaxes': ['Comment']
+        \ })
+
+    " Ignore certain sources, because they only cause nosie most of the time
+    call deoplete#custom#option('ignore_sources', {
+    \ '_': ['around', 'buffer', 'tag']
     \ })
 
-" Ignore certain sources, because they only cause nosie most of the time
-call deoplete#custom#option('ignore_sources', {
-   \ '_': ['around', 'buffer', 'tag']
-   \ })
+    " Candidate list item number limit
+    call deoplete#custom#option('max_list', 30)
 
-" Candidate list item number limit
-call deoplete#custom#option('max_list', 30)
+    " The number of processes used for the deoplete parallel feature.
+    call deoplete#custom#option('num_processes', 16)
 
-" The number of processes used for the deoplete parallel feature.
-call deoplete#custom#option('num_processes', 16)
+    " The delay for completion after input, measured in milliseconds.
+    call deoplete#custom#option('auto_complete_delay', 100)
 
-" The delay for completion after input, measured in milliseconds.
-call deoplete#custom#option('auto_complete_delay', 100)
+    " Enable deoplete auto-completion
+    call deoplete#custom#option('auto_complete', v:true)
 
-" Enable deoplete auto-completion
-call deoplete#custom#option('auto_complete', v:true)
+    " call deoplete#custom#option('ultisnips', 'rank', 10000)
 
-" call deoplete#custom#option('ultisnips', 'rank', 10000)
+    " call deoplete#custom#option('tabnine', 'rank', 100)
 
-" call deoplete#custom#option('tabnine', 'rank', 100)
+    " Automatically close function preview windows after completion
+    " see https://github.com/Shougo/deoplete.nvim/issues/115.
+    " autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
-" Automatically close function preview windows after completion
-" see https://github.com/Shougo/deoplete.nvim/issues/115.
-" autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+    " Tab-complete, see https://vi.stackexchange.com/q/19675/15292.
+    " inoremap <expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
-" Tab-complete, see https://vi.stackexchange.com/q/19675/15292.
-" inoremap <expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
+    """""""""""""""""""""""""UltiSnips settings"""""""""""""""""""
+    " Trigger configuration. Do not use <tab> if you use YouCompleteMe
+    let g:UltiSnipsExpandTrigger='<tab>'
 
-"""""""""""""""""""""""""UltiSnips settings"""""""""""""""""""
-" Trigger configuration. Do not use <tab> if you use YouCompleteMe
-let g:UltiSnipsExpandTrigger='<tab>'
+    " Shortcut to jump forward and backward in tabstop positions
+    let g:UltiSnipsJumpForwardTrigger='<c-j>'
+    let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 
-" Shortcut to jump forward and backward in tabstop positions
-let g:UltiSnipsJumpForwardTrigger='<c-j>'
-let g:UltiSnipsJumpBackwardTrigger='<c-k>'
+    " Configuration for custom snippets directory, see
+    " https://jdhao.github.io/2019/04/17/neovim_snippet_s1/ for details.
+    let g:UltiSnipsSnippetDirectories=['UltiSnips', 'my_snippets']
 
-" Configuration for custom snippets directory, see
-" https://jdhao.github.io/2019/04/17/neovim_snippet_s1/ for details.
-let g:UltiSnipsSnippetDirectories=['UltiSnips', 'my_snippets']
+    """""""""""""""""""""""""supertab settings""""""""""""""""""""""""""
+    " Auto-close method preview window
+    let g:SuperTabClosePreviewOnPopupClose = 1
 
-"""""""""""""""""""""""""supertab settings""""""""""""""""""""""""""
-" Auto-close method preview window
-let g:SuperTabClosePreviewOnPopupClose = 1
+    " Use the default top to bottom way for scroll, see
+    " https://github.com/ervandew/supertab#frequently-asked-questions
+    let g:SuperTabDefaultCompletionType = '<c-n>'
 
-" Use the default top to bottom way for scroll, see
-" https://github.com/ervandew/supertab#frequently-asked-questions
-let g:SuperTabDefaultCompletionType = '<c-n>'
+    " Shortcut to navigate forward and backward in completion menu,
+    " see https://github.com/ervandew/supertab/blob/master/doc/supertab.txt#L280
+    let g:SuperTabMappingForward = '<tab>'
+    let g:SuperTabMappingBackward = '<s-tab>'
+    "}}
 
-" Shortcut to navigate forward and backward in completion menu,
-" see https://github.com/ervandew/supertab/blob/master/doc/supertab.txt#L280
-let g:SuperTabMappingForward = '<tab>'
-let g:SuperTabMappingBackward = '<s-tab>'
-"}}
+    "{{ Python-related
+    """"""""""""""""""deoplete-jedi settings"""""""""""""""""""""""""""
+    " Whether to show doc string
+    let g:deoplete#sources#jedi#show_docstring = 1
 
-"{{ Python-related
-""""""""""""""""""deoplete-jedi settings"""""""""""""""""""""""""""
-" Whether to show doc string
-let g:deoplete#sources#jedi#show_docstring = 1
+    " For large package, set autocomplete wait time longer
+    let g:deoplete#sources#jedi#server_timeout = 50
 
-" For large package, set autocomplete wait time longer
-let g:deoplete#sources#jedi#server_timeout = 50
+    " Ignore jedi errors during completion
+    let g:deoplete#sources#jedi#ignore_errors = 1
 
-" Ignore jedi errors during completion
-let g:deoplete#sources#jedi#ignore_errors = 1
+    """"""""""""""""""""""""jedi-vim settings"""""""""""""""""""
+    " Disable autocompletion, because I use deoplete for auto-completion
+    let g:jedi#completions_enabled = 0
 
-""""""""""""""""""""""""jedi-vim settings"""""""""""""""""""
-" Disable autocompletion, because I use deoplete for auto-completion
-let g:jedi#completions_enabled = 0
+    " Whether to show function call signature
+    let g:jedi#show_call_signatures = '1'
 
-" Whether to show function call signature
-let g:jedi#show_call_signatures = '1'
+    """""""""""""""""""""""""" semshi settings """""""""""""""""""""""""""""""
+    " Do not highlight for all occurances of variable under cursor
+    let g:semshi#mark_selected_nodes=0
 
-"""""""""""""""""""""""""" semshi settings """""""""""""""""""""""""""""""
-" Do not highlight for all occurances of variable under cursor
-let g:semshi#mark_selected_nodes=0
+    " Do not show error sign since linting plugin is specicialized for that
+    let g:semshi#error_sign=v:false
 
-" Do not show error sign since linting plugin is specicialized for that
-let g:semshi#error_sign=v:false
+    let g:indentguides_tabchar = '|'
 
-let g:indentguides_tabchar = '|'
+    let g:Lf_DefaultExternalTool = "ag"
 
-let g:Lf_DefaultExternalTool = "ag"
+    let g:Lf_WindowPosition = 'popup'
 
-let g:Lf_WindowPosition = 'popup'
+    let g:Lf_PreviewInPopup = 1
+    "}}
 
-let g:Lf_PreviewInPopup = 1
-"}}
+    "{{ Search related
+    """""""""""""""""""""""""""""vim-sneak settings"""""""""""""""""""""""
+    " Use sneak label mode
+    " let g:sneak#label = 1
 
-"{{ Search related
-"""""""""""""""""""""""""""""vim-sneak settings"""""""""""""""""""""""
-" Use sneak label mode
-" let g:sneak#label = 1
+    " nmap f <Plug>Sneak_s
+    " xmap f <Plug>Sneak_s
+    " onoremap <silent> f :call sneak#wrap(v:operator, 2, 0, 1, 1)<CR>
+    " nmap F <Plug>Sneak_S
+    " xmap F <Plug>Sneak_S
+    " onoremap <silent> F :call sneak#wrap(v:operator, 2, 1, 1, 1)<CR>
 
-" nmap f <Plug>Sneak_s
-" xmap f <Plug>Sneak_s
-" onoremap <silent> f :call sneak#wrap(v:operator, 2, 0, 1, 1)<CR>
-" nmap F <Plug>Sneak_S
-" xmap F <Plug>Sneak_S
-" onoremap <silent> F :call sneak#wrap(v:operator, 2, 1, 1, 1)<CR>
+    " " Immediately after entering sneak mode, you can press f and F to go to next
+    " " or previous match
+    " let g:sneak#s_next = 1
 
-" " Immediately after entering sneak mode, you can press f and F to go to next
-" " or previous match
-" let g:sneak#s_next = 1
+    """"""""""""""""""""""""""""is.vim settings"""""""""""""""""""""""
+    " To make is.vim work together well with vim-anzu and put current match in
+    " the center of the window.
+    " `zz`: put cursor line in center of the window.
+    " `zv`: open a fold to reveal the text when cursor step into it.
+    nmap n <Plug>(is-nohl)<Plug>(anzu-n-with-echo)zzzv
+    nmap N <Plug>(is-nohl)<Plug>(anzu-N-with-echo)zzzv
 
-""""""""""""""""""""""""""""is.vim settings"""""""""""""""""""""""
-" To make is.vim work together well with vim-anzu and put current match in
-" the center of the window.
-" `zz`: put cursor line in center of the window.
-" `zv`: open a fold to reveal the text when cursor step into it.
-nmap n <Plug>(is-nohl)<Plug>(anzu-n-with-echo)zzzv
-nmap N <Plug>(is-nohl)<Plug>(anzu-N-with-echo)zzzv
+    """""""""""""""""""""""""""""vim-anzu settings"""""""""""""""""""""""
+    " Do not show search index in statusline since it is shown on command line
+    let g:airline#extensions#anzu#enabled = 0
 
-"""""""""""""""""""""""""""""vim-anzu settings"""""""""""""""""""""""
-" Do not show search index in statusline since it is shown on command line
-let g:airline#extensions#anzu#enabled = 0
+    " Maximum number of words to search
+    let g:anzu_search_limit = 500000
 
-" Maximum number of words to search
-let g:anzu_search_limit = 500000
+    """""""""""""""""""""""""""""vim-asterisk settings"""""""""""""""""""""
+    nmap *  <Plug>(asterisk-z*)<Plug>(is-nohl-1)
+    nmap #  <Plug>(asterisk-z#)<Plug>(is-nohl-1)
+    nmap g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)
+    nmap g# <Plug>(asterisk-gz#)<Plug>(is-nohl-1)
 
-"""""""""""""""""""""""""""""vim-asterisk settings"""""""""""""""""""""
-nmap *  <Plug>(asterisk-z*)<Plug>(is-nohl-1)
-nmap #  <Plug>(asterisk-z#)<Plug>(is-nohl-1)
-nmap g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)
-nmap g# <Plug>(asterisk-gz#)<Plug>(is-nohl-1)
+    """""""""""""""""""""""""""""LeaderF settings"""""""""""""""""""""
+    " Do not use cache file
+    let g:Lf_UseCache = 0
 
-"""""""""""""""""""""""""""""LeaderF settings"""""""""""""""""""""
-" Do not use cache file
-let g:Lf_UseCache = 0
+    " Ignore certain files and directories when searching files
+    let g:Lf_WildIgnore = {
+        \ 'dir': ['.git', '__pycache__', '.DS_Store'],
+        \ 'file': ['*.exe', '*.dll', '*.so', '*.o', '*.pyc', '*.jpg', '*.png',
+        \ '*.gif', '*.db', '*.tgz', '*.tar.gz', '*.gz', '*.zip', '*.bin', '*.pptx',
+        \ '*.xlsx', '*.docx', '*.pdf', '*.tmp', '*.wmv', '*.mkv', '*.mp4',  '*.flac',
+        \ '*.rmvb', '*.part']
+        \}
 
-" Ignore certain files and directories when searching files
-let g:Lf_WildIgnore = {
-    \ 'dir': ['.git', '__pycache__', '.DS_Store'],
-    \ 'file': ['*.exe', '*.dll', '*.so', '*.o', '*.pyc', '*.jpg', '*.png',
-    \ '*.gif', '*.db', '*.tgz', '*.tar.gz', '*.gz', '*.zip', '*.bin', '*.pptx',
-    \ '*.xlsx', '*.docx', '*.pdf', '*.tmp', '*.wmv', '*.mkv', '*.mp4',  '*.flac',
-    \ '*.rmvb', '*.part']
-    \}
+    " Search files in popup window
+    nnoremap <silent> <leader>f :Files <CR>
+    nnoremap <silent> <leader>t :Tags <CR>
+    nnoremap <silent> <leader>bt :BTags <CR>
+    nnoremap <silent> <leader>m :History <CR>
+    nnoremap <silent> <leader>rg :Rg <CR>
+    nnoremap <silent> <leader>gf :GFiles <CR> 
+    nnoremap <silent> <leader>l :Lines <CR> 
+    nnoremap <silent> <leader>bl :BLines <CR> 
+    let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.4, 'yoffset': 1, 'border': 'horizontal' } }
+    "}}
 
-" Search files in popup window
-nnoremap <silent> <leader>f :Files <CR>
-nnoremap <silent> <leader>t :Tags <CR>
-nnoremap <silent> <leader>bt :BTags <CR>
-nnoremap <silent> <leader>m :History <CR>
-nnoremap <silent> <leader>rg :Rg <CR>
-nnoremap <silent> <leader>gf :GFiles <CR> 
-nnoremap <silent> <leader>l :Lines <CR> 
-nnoremap <silent> <leader>bl :BLines <CR> 
-let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.4, 'yoffset': 1, 'border': 'horizontal' } }
-"}}
+    "{{ URL related
+    """"""""""""""""""""""""""""open-browser.vim settings"""""""""""""""""""
+    if g:is_win || g:is_mac
+        " Disable netrw's gx mapping.
+        let g:netrw_nogx = 1
 
-"{{ URL related
-""""""""""""""""""""""""""""open-browser.vim settings"""""""""""""""""""
-if g:is_win || g:is_mac
-    " Disable netrw's gx mapping.
-    let g:netrw_nogx = 1
+        " Use another mapping for the open URL method
+        nmap ob <Plug>(openbrowser-smart-search)
+        vmap ob <Plug>(openbrowser-smart-search)
+    endif
+    "}}
 
-    " Use another mapping for the open URL method
-    nmap ob <Plug>(openbrowser-smart-search)
-    vmap ob <Plug>(openbrowser-smart-search)
-endif
-"}}
-
-"{{ Navigation and tags
-""""""""""""""""""""""" nerdtree settings """"""""""""""""""""""""""
-" Toggle nerdtree window and keep cursor in file window,
-" adapted from https://stackoverflow.com/q/24808932/6064933
+    "{{ Navigation and tags
+    """"""""""""""""""""""" nerdtree settings """"""""""""""""""""""""""
+    " Toggle nerdtree window and keep cursor in file window,
+    " adapted from https://stackoverflow.com/q/24808932/6064933
 nnoremap <silent> <Space>s :NERDTreeToggle<CR>:wincmd p<CR>
 
 " Reveal currently editted file in nerdtree widnow,

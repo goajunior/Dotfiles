@@ -27,11 +27,12 @@ else
     colorscheme desert
 endif
 
-" let ayucolor="dark" " for mirage version of theme
-" colorscheme gruvbox8
+let ayucolor="dark" " for mirage version of theme
+" colorscheme ayu
+colorscheme gruvbox8
 
 """"""""""""""""""""""""""" deus settings"""""""""""""""""""""""""""""""""
-colorscheme ayu
+" colorscheme ayu
 
 """"""""""""""""""""""""""" solarized8 settings"""""""""""""""""""""""""
 " Solarized colorscheme without bullshit

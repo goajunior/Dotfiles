@@ -1,4 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/junior/Dropbox/UFJF/ERE/Matematica/pvc-edo'
+let g:netrw_dirhist_4='/home/junior/Dropbox/UFJF/provas/análise/2016/tvc1-ae2-2016.1'
+let g:netrw_dirhist_3='/home/junior/Documents/code/estruturas4'
 let g:netrw_dirhist_2='/home/junior/.config/nvim/UltiSnips'
 let g:netrw_dirhist_1='/home/junior/.config/nvim'
