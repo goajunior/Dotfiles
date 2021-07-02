@@ -1,0 +1,43 @@
+{
+  "coc.preferences.formatOnType":true,
+  "coc.preferences.formatOnTypeFiletypes":["python"],
+  "diagnostic.errorSign": "✘",
+  "diagnostic.infoSign": "ℹ",
+  "diagnostic.hintSign": "➤",
+  "diagnostic.enableHighlightLineNumber": true,
+  "codeLens.enable": true,
+  "signature.enable": true,
+
+
+  "python.autoUpdateLanguageServer": true,
+  "python.pythonPath": "/Users/junior/opt/anaconda3/bin/python3",
+
+  "python.linting.enabled": true,
+
+  "python.linting.pylintEnabled":true,
+  "python.linting.pylintPath":"/Users/junior/opt/anaconda3/bin/pylint",
+
+  "python.linting.pylamaEnabled":true,
+  "python.linting.pylamaPath":"/Users/junior/opt/anaconda3/bin/pylama",
+
+  "python.formatting.autopep8Path": "/Users/junior/opt/anaconda3/bin/autopep8",
+  "python.formatting.provider": "autopep8",
+
+  "python.jediEnabled":false,
+ " python.jediPath" : "/Users/junior/opt/anaconda3/jedi",
+
+  "python.venvFolders": [".venvs"],
+  "python.venvPath" : "/Users/junior/opt/anaconda3",
+
+
+  "clangd.semanticHighlighting":true,
+  "clangd.path": "/Users/junior/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd",
+
+  "html.enable":true,
+  "html.validate.scripts": true,
+  "html.format.enable":true,
+
+  "coc.preferences.colorSupport": true,
+  "highlight.colors.enable": true
+
+}
