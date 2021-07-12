@@ -180,11 +180,41 @@ nnoremap <silent> <leader>tb :bufdo tab split<CR>
 xmap <leader>F  <Plug>(coc-format-selected)
 nmap <leader>F  <Plug>(coc-format-selected)
 
+" Use `[g` and `]g` to navigate diagnostics
+" " Use `:CocDiagnostics` to get all diagnostics of current buffer in location
+" list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> <leader>q :copen <CR>
+
+" Use K to show documentation in preview window.
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
 " nmap <Leader>M <Plug>MarkSet 
 
 map ,bt :bufdo tab split<CR>
 
-let g:fzf_history_dir = '/Users/junior/tmp_vim/skim_his'
+let g:fzf_history_dir = '/home/junior/tmp_vim/skim_his'
 let g:fzf_files_options =
 			\ '--preview "(coderay {} || bat {}) 2> /dev/null | head -'.&lines.'"'
 let g:fzf_layout = {'window' : {'width' : 0.8, 'height' : 0.8}}
@@ -400,3 +430,5 @@ augroup end
 :tab sball
 let g:SimpylFold_fold_import=0
 let g:SimpylFold_fold_docstring=0
+
+nnoremap \ :Rg<CR>

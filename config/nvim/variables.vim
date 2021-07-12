@@ -5,16 +5,17 @@ let g:loaded_python_provider=0
 
 " Path to Python 3 interpreter (must be an absolute path), make startup
 " faster. See https://neovim.io/doc/user/provider.html.
-if executable('python')
-   if g:is_win
-        let g:python3_host_prog=substitute(exepath('python'), '.exe$', '', 'g')
-    elseif g:is_linux || g:is_mac
-        let g:python3_host_prog=exepath('python')
-    endif
-else
-    echoerr 'Python 3 executable not found! You must install Python 3 and set its PATH correctly!'
-endif
+" if executable('python')
+"    if g:is_win
+"         let g:python3_host_prog=substitute(exepath('python'), '.exe$', '', 'g')
+"     elseif g:is_linux || g:is_mac
+"         let g:python3_host_prog='/usr/bin/python3'
+"     endif
+" else
+"     echoerr 'Python 3 executable not found! You must install Python 3 and set its PATH correctly!'
+" endif
 
+let g:python3_host_prog='/usr/bin/python3'
 " Custom mapping <leader> (see `:h mapleader` for more info)
 let mapleader = ','
 "}}

@@ -247,7 +247,7 @@ pacs() {
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 	        source /etc/profile.d/vte.sh
 fi
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 j() {
     if [[ "$#" -ne 0 ]]; then

@@ -22,7 +22,7 @@ gaps bottom 35
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dual-screen
-exec xrandr | grep 'DisplayPort-1 connected' && xrandr --output eDP1 --auto --output HDMI1 --auto --left-of eDP1
+exec xrandr | grep 'DisplayPort-1 connected' && xrandr --output eDP3 --auto --output eDP4 --auto --left-of eDP1
 exec --no-startup-id systemctl start dhcpcd@wlp3s0
 # exec --no-startup-id nitrogen --restore ~/.config/i3/wallpaper.jpg
 # exec --no-startup-id wal -i ~/Pictures/wallhaven-qdm2kl_3840x2160.png
@@ -30,7 +30,7 @@ exec --no-startup-id systemctl start dhcpcd@wlp3s0
 exec --no-startup-id wal -i ~/.cache/bg/wallpaper
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b --respect-prop-shadow
-# exec --no-startup-id polybar mybar -r
+exec --no-startup-id polybar mybar -r
 exec --no-startup-id kitti3 
 # exec --no-startup-id setxkbmap -layout us,ru
 # exec --no-startup-id setxkbmap -option 'grp:alt_shift_toggle'
@@ -172,7 +172,7 @@ workspace 4 output HDMI-A-0
 workspace 5 output DisplayPort-1
 
 # bindsym $mod+r       exec dmenu_run -p run          -sb "$based1"  -nb "$based3" -nf "$based0" -fn pango-11
-bindsym $mod+w workspace 2:web; exec  brave
+bindsym $mod+w workspace 2:web; exec  chromium
 bindsym $mod+Return workspace 1:term; split h exec  kitty
 bindsym $mod+x workspace 1:term; exec  termite
 bindsym $mod+o workspace 3:others; exec  nautilus

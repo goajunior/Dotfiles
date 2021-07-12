@@ -3,33 +3,52 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 #	config/nvim/plugins.vim	/^    nmap #  <Plug>(asterisk-z#)<Plug>(is-nohl-1)$/;"	m
 *	config/nvim/plugins.vim	/^    nmap *  <Plug>(asterisk-z*)<Plug>(is-nohl-1)$/;"	m
+,bt	config/nvim/init.vim	/^map ,bt :bufdo tab split<CR>$/;"	m
+,cpp	config/nvim/init.vim	/^nnoremap ,cpp :-1read $HOME\/.vim\/skeleton\/skel.cpp<CR>9j3wa<CR><ESC>O$/;"	m
 /	config/nvim/mappings.vim	/^vnoremap \/ :<C-U>call feedkeys('\/\\%>'.(line("'<")-1).'l\\%<'.(line("'>")+1)."l")<CR>$/;"	m
 0	config/nvim/mappings.vim	/^nnoremap <silent> 0 g0$/;"	m
 <C-L>	config/nvim/mappings.vim	/^  nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>$/;"	m
 <C-S>	config/nvim/keys/which-key.vim	/^nnoremap <silent> <C-S> :silent WhichKey '<Space>'<CR>$/;"	m
 <C-S>	config/nvim/keys/which-key.vim	/^vnoremap <silent> <C-S> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>$/;"	m
+<C-a>	config/nvim/init.vim	/^inoremap <C-a> <C-o>0$/;"	m
 <C-b>	config/nvim/plugins.vim	/^nnoremap <silent> <C-b> :call comfortable_motion#flick(winheight(0) * -4)<CR>$/;"	m
 <C-d>	config/nvim/plugins.vim	/^nnoremap <silent> <C-d> :call comfortable_motion#flick(winheight(0) * 2)<CR>$/;"	m
+<C-down>	config/nvim/init.vim	/^nnoremap <C-down> <C-w>j$/;"	m
 <C-down>	config/nvim/mappings.vim	/^nnoremap <C-down> <C-w>j$/;"	m
+<C-e>	config/nvim/init.vim	/^inoremap <C-e> <C-o>\$$/;"	m
 <C-f>	config/nvim/plugins.vim	/^nnoremap <silent> <C-f> :call comfortable_motion#flick(winheight(0) * 4)<CR>$/;"	m
+<C-h>	config/nvim/init.vim	/^map <C-h> <C-W>h$/;"	m
+<C-j>	config/nvim/init.vim	/^map <C-j> <C-W>j$/;"	m
+<C-k>	config/nvim/init.vim	/^map <C-k> <C-W>k$/;"	m
+<C-l>	config/nvim/init.vim	/^map <C-l> <C-W>l$/;"	m
+<C-left>	config/nvim/init.vim	/^nnoremap <C-left> <C-w>h$/;"	m
 <C-left>	config/nvim/mappings.vim	/^nnoremap <C-left> <C-w>h$/;"	m
+<C-right>	config/nvim/init.vim	/^nnoremap <C-right> <C-w>l$/;"	m
 <C-right>	config/nvim/mappings.vim	/^nnoremap <C-right> <C-w>l$/;"	m
 <C-u>	config/nvim/plugins.vim	/^nnoremap <silent> <C-u> :call comfortable_motion#flick(winheight(0) * -2)<CR>$/;"	m
+<C-up>	config/nvim/init.vim	/^nnoremap <C-up> <C-w>k$/;"	m
 <C-up>	config/nvim/mappings.vim	/^nnoremap <C-up> <C-w>k$/;"	m
+<Down>	config/nvim/init.vim	/^inoremap <Down> <nop>$/;"	m
+<Down>	config/nvim/init.vim	/^nnoremap <Down> <nop>$/;"	m
 <Down>	config/nvim/mappings.vim	/^inoremap <Down> <nop>$/;"	m
 <Down>	config/nvim/mappings.vim	/^nnoremap <Down> <nop>$/;"	m
 <F11>	config/nvim/mappings.vim	/^inoremap <silent> <F11> <C-O>:set spell! <bar> :AutoSaveToggle<cr>$/;"	m
 <F11>	config/nvim/mappings.vim	/^nnoremap <silent> <F11> :set spell! <bar> :AutoSaveToggle<cr>$/;"	m
 <F2>	config/nvim/plugins.vim	/^nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>$/;"	m
 <F5>	config/nvim/plugins.vim	/^nnoremap <F5> :call LanguageClient_contextMenu()<CR>$/;"	m
+<Leader>hl	config/nvim/init.vim	/^nnoremap <silent><expr> <Leader>hl (&hls && v:hlsearch ? ':nohls' : ':set hls')."\\n"$/;"	m
 <Leader>hl	config/nvim/mappings.vim	/^nnoremap <silent><expr> <Leader>hl (&hls && v:hlsearch ? ':nohls' : ':set hls')."\\n"$/;"	m
+<Left>	config/nvim/init.vim	/^inoremap <Left> <nop>$/;"	m
+<Left>	config/nvim/init.vim	/^nnoremap <Left> <nop>$/;"	m
 <Left>	config/nvim/mappings.vim	/^inoremap <Left> <nop>$/;"	m
 <Left>	config/nvim/mappings.vim	/^nnoremap <Left> <nop>$/;"	m
 <M-S-m>	config/nvim/plugins.vim	/^    nnoremap <silent> <M-S-m> :MarkdownPreviewStop<CR>$/;"	m
 <M-m>	config/nvim/plugins.vim	/^    nnoremap <silent> <M-m> :MarkdownPreview<CR>$/;"	m
+<Right>	config/nvim/init.vim	/^inoremap <Right> <nop>$/;"	m
+<Right>	config/nvim/init.vim	/^nnoremap <Right> <nop>$/;"	m
 <Right>	config/nvim/mappings.vim	/^inoremap <Right> <nop>$/;"	m
 <Right>	config/nvim/mappings.vim	/^nnoremap <Right> <nop>$/;"	m
 <S-Tab>	config/nvim/mappings.vim	/^inoremap <S-Tab> <ESC><<i$/;"	m
@@ -39,45 +58,75 @@
 <Space>b	config/nvim/plugins.vim	/^nnoremap <silent> <Space>b :Grepper -buffer<CR>$/;"	m
 <Space>f	config/nvim/plugins.vim	/^nnoremap <silent> <Space>f :NERDTreeFind<CR>$/;"	m
 <Space>g	config/nvim/plugins.vim	/^nnoremap <silent> <Space>g :Grepper<CR>$/;"	m
+<Space>s	config/nvim/init.vim	/^nnoremap <silent> <Space>s :NERDTreeToggle<CR>:wincmd p<CR>$/;"	m
 <Space>s	config/nvim/plugins.vim	/^nnoremap <silent> <Space>s :NERDTreeToggle<CR>:wincmd p<CR>$/;"	m
+<Space>t	config/nvim/init.vim	/^nnoremap <silent> <Space>t :TagbarToggle<CR>$/;"	m
 <Space>t	config/nvim/plugins.vim	/^nnoremap <silent> <Space>t :TagbarToggle<CR>$/;"	m
 <Tab>	config/nvim/mappings.vim	/^nnoremap <Tab> %$/;"	m
+<Up>	config/nvim/init.vim	/^inoremap <Up> <nop>$/;"	m
+<Up>	config/nvim/init.vim	/^nnoremap <Up> <nop>$/;"	m
 <Up>	config/nvim/mappings.vim	/^inoremap <Up> <nop>$/;"	m
 <Up>	config/nvim/mappings.vim	/^nnoremap <Up> <nop>$/;"	m
+<c-n>	config/nvim/init.vim	/^nmap <c-n> <plug>(YoinkPostPasteSwapBack)$/;"	m
 <c-n>	config/nvim/plugins.vim	/^nmap <c-n> <plug>(YoinkPostPasteSwapBack)$/;"	m
+<c-p>	config/nvim/init.vim	/^nmap <c-p> <plug>(YoinkPostPasteSwapForward)$/;"	m
 <c-p>	config/nvim/plugins.vim	/^nmap <c-p> <plug>(YoinkPostPasteSwapForward)$/;"	m
 <c-t>	config/nvim/mappings.vim	/^inoremap <silent> <c-t> <Esc>b~lea$/;"	m
 <c-u>	config/nvim/mappings.vim	/^inoremap <silent> <c-u> <Esc>viwUea$/;"	m
 <cr>	config/nvim/mappings.vim	/^inoremap <expr> <cr> ((pumvisible())?("\\<C-Y>"):("\\<cr>"))$/;"	m
 <esc>	config/nvim/mappings.vim	/^inoremap <expr> <esc> ((pumvisible())?("\\<C-e>"):("\\<esc>"))$/;"	m
+<leader>+	config/nvim/init.vim	/^nmap <leader>+ <c-w>>$/;"	m
 <leader>+	config/nvim/mappings.vim	/^nmap <leader>+ <c-w>>$/;"	m
+<leader>-	config/nvim/init.vim	/^nmap <leader>- <c-w><$/;"	m
 <leader>-	config/nvim/mappings.vim	/^nmap <leader>- <c-w><$/;"	m
 <leader><Space>	config/nvim/mappings.vim	/^nnoremap <silent> <leader><Space> :call utils#StripTrailingWhitespaces()<CR>$/;"	m
+<leader><tab>	config/nvim/init.vim	/^nmap <leader><tab> <plug>(fzf-maps-n)$/;"	m
+<leader><tab>	config/nvim/init.vim	/^omap <leader><tab> <plug>(fzf-maps-o)$/;"	m
+<leader>=	config/nvim/init.vim	/^nmap <leader>= <c-w>=$/;"	m
 <leader>=	config/nvim/mappings.vim	/^nmap <leader>= <c-w>=$/;"	m
+<leader>F	config/nvim/init.vim	/^nmap <leader>F  <Plug>(coc-format-selected)$/;"	m
 <leader>P	config/nvim/mappings.vim	/^nnoremap <leader>P m`O<ESC>p``$/;"	m
 <leader>Q	config/nvim/mappings.vim	/^nnoremap <silent> <leader>Q :qa<CR>$/;"	m
+<leader>T	config/nvim/init.vim	/^nnoremap <silent> <leader>T :Tags <CR>$/;"	m
 <leader>W	config/nvim/mappings.vim	/^nnoremap <silent> <leader>W :update<CR>$/;"	m
+<leader>bl	config/nvim/init.vim	/^nnoremap <silent> <leader>bl :BLines <CR> $/;"	m
 <leader>bl	config/nvim/plugins.vim	/^    nnoremap <silent> <leader>bl :BLines <CR> $/;"	m
+<leader>bt	config/nvim/init.vim	/^nnoremap <silent> <leader>bt :BTags <CR>$/;"	m
 <leader>bt	config/nvim/plugins.vim	/^    nnoremap <silent> <leader>bt :BTags <CR>$/;"	m
+<leader>c	config/nvim/init.vim	/^noremap <leader>c "*yy<cr>$/;"	m
 <leader>cd	config/nvim/mappings.vim	/^nnoremap <silent> <leader>cd :lcd %:p:h<CR>:pwd<CR>$/;"	m
 <leader>dp	config/nvim/plugins.vim	/^nnoremap <leader>dp :GdbStartPDB python -m pdb %<CR>$/;"	m
+<leader>ev	config/nvim/init.vim	/^nnoremap <silent> <leader>ev :tabnew $MYVIMRC <bar> tcd %:h<cr>$/;"	m
 <leader>ev	config/nvim/mappings.vim	/^nnoremap <silent> <leader>ev :tabnew $MYVIMRC <bar> tcd %:h<cr>$/;"	m
+<leader>f	config/nvim/init.vim	/^nnoremap <silent> <leader>f :Files <CR>$/;"	m
 <leader>f	config/nvim/plugins.vim	/^    nnoremap <silent> <leader>f :Files <CR>$/;"	m
 <leader>gT	config/nvim/plugins.vim	/^nmap <leader>gT <Plug>TitlecaseLine$/;"	m
+<leader>gf	config/nvim/init.vim	/^nnoremap <silent> <leader>gf :GFiles <CR> $/;"	m
 <leader>gf	config/nvim/plugins.vim	/^    nnoremap <silent> <leader>gf :GFiles <CR> $/;"	m
 <leader>gt	config/nvim/plugins.vim	/^nmap <leader>gt <Plug>Titlecase$/;"	m
 <leader>gt	config/nvim/plugins.vim	/^vmap <leader>gt <Plug>Titlecase$/;"	m
+<leader>l	config/nvim/init.vim	/^nnoremap <silent> <leader>l :Lines <CR> $/;"	m
 <leader>l	config/nvim/plugins.vim	/^    nnoremap <silent> <leader>l :Lines <CR> $/;"	m
+<leader>m	config/nvim/init.vim	/^nnoremap <silent> <leader>m :History <CR>$/;"	m
 <leader>m	config/nvim/plugins.vim	/^    nnoremap <silent> <leader>m :History <CR>$/;"	m
 <leader>p	config/nvim/mappings.vim	/^nnoremap <leader>p m`o<ESC>p``$/;"	m
+<leader>q	config/nvim/init.vim	/^nnoremap <silent> <leader>q :copen <CR>$/;"	m
 <leader>q	config/nvim/mappings.vim	/^nnoremap <silent> <leader>q :x<CR>$/;"	m
+<leader>rg	config/nvim/init.vim	/^nnoremap <silent> <leader>rg :Rg <CR>$/;"	m
 <leader>rg	config/nvim/plugins.vim	/^    nnoremap <silent> <leader>rg :Rg <CR>$/;"	m
+<leader>rn	config/nvim/init.vim	/^nmap <leader>rn <Plug>(coc-rename)$/;"	m
 <leader>st	config/nvim/mappings.vim	/^nnoremap <silent> <leader>st :call utils#SynGroup()<CR>$/;"	m
+<leader>sv	config/nvim/init.vim	/^nnoremap <silent> <leader>sv :silent update $MYVIMRC <bar> source $MYVIMRC <bar>$/;"	m
 <leader>sv	config/nvim/mappings.vim	/^nnoremap <silent> <leader>sv :silent update $MYVIMRC <bar> source $MYVIMRC <bar>$/;"	m
+<leader>t	config/nvim/init.vim	/^nmap <leader>t :vert term<CR>$/;"	m
 <leader>t	config/nvim/plugins.vim	/^    nnoremap <silent> <leader>t :Tags <CR>$/;"	m
+<leader>tb	config/nvim/init.vim	/^nnoremap <silent> <leader>tb :bufdo tab split<CR>$/;"	m
 <leader>v	config/nvim/mappings.vim	/^nnoremap <leader>v `[V`]$/;"	m
+<leader>wh	config/nvim/init.vim	/^nmap <leader>wh <c-w>s$/;"	m
 <leader>wh	config/nvim/mappings.vim	/^nmap <leader>wh <c-w>s$/;"	m
+<leader>wv	config/nvim/init.vim	/^nmap <leader>wv <c-w>v$/;"	m
 <leader>wv	config/nvim/mappings.vim	/^nmap <leader>wv <c-w>v$/;"	m
+AirlineThemes	config/nvim/init.vim	/^command! AirlineThemes call fzf#run({$/;"	c
 BROWSER	config/rofi/rofi-web-search.py	/^BROWSER = 'firefox'          # or 'firefox'$/;"	v
 C	config/nvim/mappings.vim	/^nnoremap C "_C$/;"	m
 CLIENT_SECRETS_PATH	config/polybar/gmail/auth.py	/^CLIENT_SECRETS_PATH = os.path.join(DIR, 'client_secrets.json')$/;"	v
@@ -85,50 +134,73 @@ CONFIG	config/rofi/rofi-web-search.py	/^CONFIG = {$/;"	v
 CREDENTIALS_PATH	config/polybar/gmail/auth.py	/^CREDENTIALS_PATH = os.path.join(DIR, 'credentials.json')$/;"	v
 CREDENTIALS_PATH	config/polybar/gmail/launch.py	/^CREDENTIALS_PATH = os.path.join(DIR, 'credentials.json')$/;"	v
 Categories	config/rofimenu/rofimenu.config	/^Categories() {$/;"	f
+Cd	config/nvim/init.vim	/^command! -nargs=* -complete=dir Cd call fzf#run(fzf#wrap($/;"	c
 DIR	config/polybar/gmail/auth.py	/^DIR = os.path.dirname(os.path.realpath(__file__))$/;"	v
 DIR	config/polybar/gmail/launch.py	/^DIR = os.path.dirname(os.path.realpath(__file__))$/;"	v
 Desktop	config/rofimenu/rofimenu.config	/^Desktop() {$/;"	f
 Exit	config/rofimenu/rofimenu.config	/^Exit() {$/;"	f
 Favourites	config/rofimenu/rofimenu.config	/^Favourites() {$/;"	f
+GoToDefinition	config/nvim/init.vim	/^function! s:GoToDefinition()$/;"	f
 H	config/nvim/mappings.vim	/^nnoremap H ^$/;"	m
 HiLink	config/nvim/syntax/python.vim	/^    command -nargs=+ HiLink hi def link <args>$/;"	c
 HiLink	config/nvim/syntax/python.vim	/^    command -nargs=+ HiLink hi link <args>$/;"	c
+K	config/nvim/init.vim	/^nnoremap <silent> K :call <SID>show_documentation()<CR>$/;"	m
 K	config/nvim/plugins.vim	/^nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>$/;"	m
 L	config/nvim/mappings.vim	/^nnoremap L g_$/;"	m
 Menu_settings	config/rofimenu/rofimenu.config	/^Menu_settings() {$/;"	f
 N	config/nvim/plugins.vim	/^    nmap N <Plug>(is-nohl)<Plug>(anzu-N-with-echo)zzzv$/;"	m
 NERDTreeAutoDeleteBuffer	config/nvim/plugins.vim	/^let NERDTreeAutoDeleteBuffer = 1$/;"	v
+NERDTreeIgnore	config/nvim/init.vim	/^let NERDTreeIgnore = ['\\.pyc$', '^__pycache__$']$/;"	v
 NERDTreeIgnore	config/nvim/plugins.vim	/^let NERDTreeIgnore = ['\\.pyc$', '^__pycache__$']$/;"	v
 NERDTreeMinimalUI	config/nvim/plugins.vim	/^let NERDTreeMinimalUI=0$/;"	v
 NERDTreeStatusline	config/nvim/plugins.vim	/^let NERDTreeStatusline="%{exists('b:NERDTree')?fnamemodify(b:NERDTree.root.path.str(), ':~'):''}"$/;"	v
+OO	config/nvim/init.vim	/^nnoremap <expr> OO 'm`' . v:count1 . 'O<Esc>``'$/;"	m
 OO	config/nvim/mappings.vim	/^nnoremap <expr> OO 'm`' . v:count1 . 'O<Esc>``'$/;"	m
+P	config/nvim/init.vim	/^nmap P <plug>(YoinkPaste_P)$/;"	m
 P	config/nvim/plugins.vim	/^nmap P <plug>(YoinkPaste_P)$/;"	m
+ProjectDrawer	config/nvim/init.vim	/^augroup ProjectDrawer$/;"	a
 REDIRECT_URI	config/polybar/gmail/auth.py	/^REDIRECT_URI = 'urn:ietf:wg:oauth:2.0:oob'$/;"	v
 SCOPE	config/polybar/gmail/auth.py	/^SCOPE = 'https:\/\/www.googleapis.com\/auth\/gmail.readonly'$/;"	v
 SEARCH_ENGINE	config/rofi/rofi-web-search.py	/^SEARCH_ENGINE = 'google'    # or 'duckduckgo'$/;"	v
-ServerNotFoundError	config/polybar/gmail/launch.py	/^from httplib2 import ServerNotFoundError$/;"	i
 Single_quote	config/nvim/autoload/utils.vim	/^function! s:Single_quote(str) abort$/;"	f
 UpdateSkim	config/nvim/plugins.vim	/^        function! UpdateSkim(status)$/;"	f
+WindowTitleGroup	config/nvim/init.vim	/^augroup WindowTitleGroup$/;"	a
 WindowTitleGroup	config/nvim/options.vim	/^augroup WindowTitleGroup$/;"	a
 Y	config/nvim/mappings.vim	/^nnoremap Y y\$$/;"	m
+[L	config/nvim/init.vim	/^nnoremap [L :lfirst<CR>zv$/;"	m
 [L	config/nvim/mappings.vim	/^nnoremap [L :lfirst<CR>zv$/;"	m
+[Q	config/nvim/init.vim	/^nnoremap [Q :cfirst<CR>zv$/;"	m
 [Q	config/nvim/mappings.vim	/^nnoremap [Q :cfirst<CR>zv$/;"	m
+[b	config/nvim/init.vim	/^nnoremap [b :bprevious<CR>zv$/;"	m
 [b	config/nvim/mappings.vim	/^nnoremap [b :bprevious<CR>zv$/;"	m
+[g	config/nvim/init.vim	/^nmap <silent> [g <Plug>(coc-diagnostic-prev)$/;"	m
+[l	config/nvim/init.vim	/^nnoremap [l :lprevious<CR>zv$/;"	m
 [l	config/nvim/mappings.vim	/^nnoremap [l :lprevious<CR>zv$/;"	m
+[q	config/nvim/init.vim	/^nnoremap [q :cprevious<CR>zv$/;"	m
 [q	config/nvim/mappings.vim	/^nnoremap [q :cprevious<CR>zv$/;"	m
+[y	config/nvim/init.vim	/^nmap [y <plug>(YoinkRotateBack)$/;"	m
 [y	config/nvim/plugins.vim	/^nmap [y <plug>(YoinkRotateBack)$/;"	m
+\	config/nvim/init.vim	/^nnoremap \\ :Rg<CR>$/;"	m
+\d	config/nvim/init.vim	/^nnoremap <silent> \\d :bprevious <bar> bdelete #<CR>$/;"	m
 \d	config/nvim/mappings.vim	/^nnoremap <silent> \\d :bprevious <bar> bdelete #<CR>$/;"	m
+\x	config/nvim/init.vim	/^nnoremap<silent> \\x :windo lclose <bar> cclose<CR>$/;"	m
 \x	config/nvim/mappings.vim	/^nnoremap<silent> \\x :windo lclose <bar> cclose<CR>$/;"	m
+]L	config/nvim/init.vim	/^nnoremap ]L :llast<CR>zv$/;"	m
 ]L	config/nvim/mappings.vim	/^nnoremap ]L :llast<CR>zv$/;"	m
+]Q	config/nvim/init.vim	/^nnoremap ]Q :clast<CR>zv$/;"	m
 ]Q	config/nvim/mappings.vim	/^nnoremap ]Q :clast<CR>zv$/;"	m
+]b	config/nvim/init.vim	/^nnoremap ]b :bnext<CR>zv$/;"	m
 ]b	config/nvim/mappings.vim	/^nnoremap ]b :bnext<CR>zv$/;"	m
+]g	config/nvim/init.vim	/^nmap <silent> ]g <Plug>(coc-diagnostic-next)$/;"	m
+]l	config/nvim/init.vim	/^nnoremap ]l :lnext<CR>zv$/;"	m
 ]l	config/nvim/mappings.vim	/^nnoremap ]l :lnext<CR>zv$/;"	m
+]q	config/nvim/init.vim	/^nnoremap ]q :cnext<CR>zv$/;"	m
 ]q	config/nvim/mappings.vim	/^nnoremap ]q :cnext<CR>zv$/;"	m
+]y	config/nvim/init.vim	/^nmap ]y <plug>(YoinkRotateForward)$/;"	m
 ]y	config/nvim/plugins.vim	/^nmap ]y <plug>(YoinkRotateForward)$/;"	m
 ^	config/nvim/mappings.vim	/^nnoremap <silent> ^ g^$/;"	m
 accurate_syn_highlight	config/nvim/autocommands.vim	/^augroup accurate_syn_highlight$/;"	a
 activate_category	config/rofimenu/rofimenu.config	/^activate_category() {	# shows drun modi filtered with category. If no command selected, returns to categories modi$/;"	f
-argparse	config/polybar/gmail/launch.py	/^import argparse$/;"	i
 args	config/polybar/gmail/launch.py	/^args = parser.parse_args()$/;"	v
 ask_confirmation	config/i3/shutdown_menu	/^function ask_confirmation() {$/;"	f
 auth_code	config/polybar/gmail/auth.py	/^    auth_code = input('Enter the auth code: ')$/;"	v
@@ -143,43 +215,45 @@ c	config/nvim/mappings.vim	/^nnoremap c "_c$/;"	m
 cc	config/nvim/mappings.vim	/^nnoremap cc "_cc$/;"	m
 check_launcher	config/i3/shutdown_menu	/^function check_launcher() {$/;"	f
 cleanhtml	config/rofi/rofi-web-search.py	/^def cleanhtml(txt):$/;"	f
-client	config/polybar/gmail/auth.py	/^from oauth2client import client, file$/;"	i
-client	config/polybar/gmail/launch.py	/^from oauth2client import client, file$/;"	i
 command_exists	config/i3/shutdown_menu	/^function command_exists() {$/;"	f
 count_was	config/polybar/gmail/launch.py	/^            count_was = update_count(count_was)$/;"	v
 count_was	config/polybar/gmail/launch.py	/^count_was = 0$/;"	v
 credentials	config/polybar/gmail/auth.py	/^    credentials = flow.step2_exchange(auth_code)$/;"	v
 credentials	config/polybar/gmail/auth.py	/^    credentials = storage.get()$/;"	v
-datetime	config/rofi/rofi-web-search.py	/^import datetime$/;"	i
 delay	config/rofimenu/rofimenu.config	/^delay() {$/;"	f
 did_python_syn_inits	config/nvim/syntax/python.vim	/^    let did_python_syn_inits = 1$/;"	v
-discovery	config/polybar/gmail/launch.py	/^from apiclient import discovery, errors$/;"	i
 dynamic_smartcase	config/nvim/autocommands.vim	/^augroup dynamic_smartcase$/;"	a
 error_prefix	config/polybar/gmail/launch.py	/^error_prefix = '%{F' + args.color + '}\\uf06a %{F-}'$/;"	v
-errors	config/polybar/gmail/launch.py	/^from apiclient import discovery, errors$/;"	i
 fetch_suggestions	config/rofi/rofi-web-search.py	/^def fetch_suggestions(search_string):$/;"	f
-file	config/polybar/gmail/auth.py	/^from oauth2client import client, file$/;"	i
-file	config/polybar/gmail/launch.py	/^from oauth2client import client, file$/;"	i
 firenvim	config/nvim/plugins.vim	/^    augroup firenvim$/;"	a
 flow	config/polybar/gmail/auth.py	/^    flow = client.flow_from_clientsecrets(CLIENT_SECRETS_PATH, scope=SCOPE,$/;"	v
 g#	config/nvim/plugins.vim	/^    nmap g# <Plug>(asterisk-gz#)<Plug>(is-nohl-1)$/;"	m
 g*	config/nvim/plugins.vim	/^    nmap g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)$/;"	m
 g:LanguageClient_serverCommands	config/nvim/plugins.vim	/^let g:LanguageClient_serverCommands = {$/;"	v
+g:Lf_DefaultExternalTool	config/nvim/init.vim	/^let g:Lf_DefaultExternalTool = "ag"$/;"	v
 g:Lf_DefaultExternalTool	config/nvim/plugins.vim	/^    let g:Lf_DefaultExternalTool = "ag"$/;"	v
 g:Lf_PreviewInPopup	config/nvim/plugins.vim	/^    let g:Lf_PreviewInPopup = 1$/;"	v
 g:Lf_UseCache	config/nvim/plugins.vim	/^    let g:Lf_UseCache = 0$/;"	v
+g:Lf_WildIgnore	config/nvim/init.vim	/^let g:Lf_WildIgnore = {$/;"	v
 g:Lf_WildIgnore	config/nvim/plugins.vim	/^    let g:Lf_WildIgnore = {$/;"	v
 g:Lf_WindowPosition	config/nvim/plugins.vim	/^    let g:Lf_WindowPosition = 'popup'$/;"	v
 g:MY_DICT	config/nvim/options.vim	/^let g:MY_DICT = expand(g:nvim_config_root . '\/dict\/words')$/;"	v
+g:SimpylFold_fold_docstring	config/nvim/init.vim	/^let g:SimpylFold_fold_docstring=0$/;"	v
+g:SimpylFold_fold_import	config/nvim/init.vim	/^let g:SimpylFold_fold_import=0$/;"	v
 g:SuperTabClosePreviewOnPopupClose	config/nvim/plugins.vim	/^    let g:SuperTabClosePreviewOnPopupClose = 1$/;"	v
 g:SuperTabDefaultCompletionType	config/nvim/plugins.vim	/^    let g:SuperTabDefaultCompletionType = '<c-n>'$/;"	v
 g:SuperTabMappingBackward	config/nvim/plugins.vim	/^    let g:SuperTabMappingBackward = '<s-tab>'$/;"	v
 g:SuperTabMappingForward	config/nvim/plugins.vim	/^    let g:SuperTabMappingForward = '<tab>'$/;"	v
+g:UltiSnipsEditSplit	config/nvim/init.vim	/^let g:UltiSnipsEditSplit="vertical"$/;"	v
+g:UltiSnipsExpandTrigger	config/nvim/init.vim	/^let g:UltiSnipsExpandTrigger= '<tab>'$/;"	v
 g:UltiSnipsExpandTrigger	config/nvim/plugins.vim	/^    let g:UltiSnipsExpandTrigger='<tab>'$/;"	v
+g:UltiSnipsJumpBackwardTrigger	config/nvim/init.vim	/^let g:UltiSnipsJumpBackwardTrigger='<C-k>'$/;"	v
 g:UltiSnipsJumpBackwardTrigger	config/nvim/plugins.vim	/^    let g:UltiSnipsJumpBackwardTrigger='<c-k>'$/;"	v
+g:UltiSnipsJumpForwardTrigger	config/nvim/init.vim	/^let g:UltiSnipsJumpForwardTrigger='<C-j>'$/;"	v
 g:UltiSnipsJumpForwardTrigger	config/nvim/plugins.vim	/^    let g:UltiSnipsJumpForwardTrigger='<c-j>'$/;"	v
 g:UltiSnipsSnippetDirectories	config/nvim/plugins.vim	/^    let g:UltiSnipsSnippetDirectories=['UltiSnips', 'my_snippets']$/;"	v
 g:airline#extensions#anzu#enabled	config/nvim/plugins.vim	/^    let g:airline#extensions#anzu#enabled = 0$/;"	v
+g:airline#extensions#bufferline#enabled	config/nvim/init.vim	/^let g:airline#extensions#bufferline#enabled = 1$/;"	v
 g:airline#extensions#hunks#non_zero_only	config/nvim/plugins.vim	/^let g:airline#extensions#hunks#non_zero_only = 1$/;"	v
 g:airline#extensions#tabline#buffer_nr_format	config/nvim/plugins.vim	/^let g:airline#extensions#tabline#buffer_nr_format = '%s. '$/;"	v
 g:airline#extensions#tabline#buffer_nr_show	config/nvim/plugins.vim	/^let g:airline#extensions#tabline#buffer_nr_show = 1$/;"	v
@@ -187,12 +261,17 @@ g:airline#extensions#tabline#enabled	config/nvim/plugins.vim	/^let g:airline#ext
 g:airline#extensions#tabline#formatter	config/nvim/plugins.vim	/^let g:airline#extensions#tabline#formatter = 'unique_tail_improved'$/;"	v
 g:airline#extensions#tagbar#enabled	config/nvim/plugins.vim	/^let g:airline#extensions#tagbar#enabled = 1$/;"	v
 g:airline_highlighting_cache	config/nvim/plugins.vim	/^let g:airline_highlighting_cache = 1$/;"	v
+g:airline_left_alt_sep	config/nvim/init.vim	/^let g:airline_left_alt_sep = ''$/;"	v
+g:airline_left_sep	config/nvim/init.vim	/^let g:airline_left_sep = ''$/;"	v
+g:airline_powerline_fonts	config/nvim/init.vim	/^let g:airline_powerline_fonts = 1$/;"	v
 g:airline_powerline_fonts	config/nvim/plugins.vim	/^let g:airline_powerline_fonts = 0$/;"	v
+g:airline_right_sep	config/nvim/init.vim	/^let g:airline_right_sep = ''$/;"	v
 g:airline_skip_empty_sections	config/nvim/plugins.vim	/^let g:airline_skip_empty_sections = 1$/;"	v
 g:airline_symbols	config/nvim/plugins.vim	/^    let g:airline_symbols = {}$/;"	v
 g:airline_symbols	config/nvim/plugins.vim	/^let g:airline_symbols.branch = '⎇'$/;"	v
 g:airline_symbols	config/nvim/plugins.vim	/^let g:airline_symbols.paste = 'ρ'$/;"	v
 g:airline_symbols	config/nvim/plugins.vim	/^let g:airline_symbols.spell = 'Ꞩ'$/;"	v
+g:airline_theme	config/nvim/init.vim	/^let g:airline_theme='badwolf'$/;"	v
 g:airline_theme	config/nvim/plugins.vim	/^    let g:airline_theme=s:theme$/;"	v
 g:ale_linters	config/nvim/plugins.vim	/^let g:ale_linters = {$/;"	v
 g:ale_linters_explicit	config/nvim/plugins.vim	/^let g:ale_linters_explicit = 1$/;"	v
@@ -208,16 +287,22 @@ g:backupdir	config/nvim/options.vim	/^let g:backupdir=expand(stdpath('data') . '
 g:comfortable_motion_no_default_key_mappings	config/nvim/plugins.vim	/^let g:comfortable_motion_no_default_key_mappings = 1$/;"	v
 g:comfortable_motion_scroll_down_key	config/nvim/plugins.vim	/^let g:comfortable_motion_scroll_down_key = 'j'$/;"	v
 g:comfortable_motion_scroll_up_key	config/nvim/plugins.vim	/^let g:comfortable_motion_scroll_up_key = 'k'$/;"	v
-g:config_file_list	config/nvim/init.vim	/^let g:config_file_list = ['variables.vim',$/;"	v
 g:deoplete#enable_at_startup	config/nvim/plugins.vim	/^    let g:deoplete#enable_at_startup = 1$/;"	v
 g:deoplete#sources#jedi#ignore_errors	config/nvim/plugins.vim	/^    let g:deoplete#sources#jedi#ignore_errors = 1$/;"	v
 g:deoplete#sources#jedi#server_timeout	config/nvim/plugins.vim	/^    let g:deoplete#sources#jedi#server_timeout = 50$/;"	v
 g:deoplete#sources#jedi#show_docstring	config/nvim/plugins.vim	/^    let g:deoplete#sources#jedi#show_docstring = 1$/;"	v
 g:firenvim_config	config/nvim/plugins.vim	/^    let g:firenvim_config = {$/;"	v
+g:floaterm_keymap_new	config/nvim/init.vim	/^let g:floaterm_keymap_new    = '<F7>'$/;"	v
 g:floaterm_keymap_new	config/nvim/plugins.vim	/^let g:floaterm_keymap_new    = '<F7>'$/;"	v
+g:floaterm_keymap_next	config/nvim/init.vim	/^let g:floaterm_keymap_next   = '<F9>'$/;"	v
 g:floaterm_keymap_next	config/nvim/plugins.vim	/^let g:floaterm_keymap_next   = '<F9>'$/;"	v
+g:floaterm_keymap_prev	config/nvim/init.vim	/^let g:floaterm_keymap_prev   = '<F8>'$/;"	v
 g:floaterm_keymap_prev	config/nvim/plugins.vim	/^let g:floaterm_keymap_prev   = '<F8>'$/;"	v
+g:floaterm_keymap_toggle	config/nvim/init.vim	/^let g:floaterm_keymap_toggle = '<F10>'$/;"	v
 g:floaterm_keymap_toggle	config/nvim/plugins.vim	/^let g:floaterm_keymap_toggle = '<F10>'$/;"	v
+g:fzf_files_options	config/nvim/init.vim	/^let g:fzf_files_options =$/;"	v
+g:fzf_history_dir	config/nvim/init.vim	/^let g:fzf_history_dir = '\/home\/junior\/tmp_vim\/skim_his'$/;"	v
+g:fzf_layout	config/nvim/init.vim	/^let g:fzf_layout = {'window' : {'width' : 0.8, 'height' : 0.8}}$/;"	v
 g:fzf_layout	config/nvim/plugins.vim	/^    let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.4, 'yoffset': 1, 'border': 'horizontal' } }$/;"	v
 g:gruvbox_filetype_hi_groups	config/nvim/ui.vim	/^    let g:gruvbox_filetype_hi_groups = 0$/;"	v
 g:gruvbox_italicize_strings	config/nvim/ui.vim	/^    let g:gruvbox_italicize_strings=1$/;"	v
@@ -231,10 +316,8 @@ g:haskell_enable_recursivedo	config/nvim/plugins.vim	/^let g:haskell_enable_recu
 g:haskell_enable_static_pointers	config/nvim/plugins.vim	/^let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`$/;"	v
 g:haskell_enable_typeroles	config/nvim/plugins.vim	/^let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles$/;"	v
 g:highlightedyank_highlight_duration	config/nvim/plugins.vim	/^let g:highlightedyank_highlight_duration = 1000$/;"	v
+g:indentLine_char_list	config/nvim/init.vim	/^let g:indentLine_char_list = ['|', '¦', '┆', '┊']$/;"	v
 g:indentguides_tabchar	config/nvim/plugins.vim	/^    let g:indentguides_tabchar = '|'$/;"	v
-g:is_linux	config/nvim/init.vim	/^let g:is_linux = has('unix') && !has('macunix')$/;"	v
-g:is_mac	config/nvim/init.vim	/^let g:is_mac = has('macunix')$/;"	v
-g:is_win	config/nvim/init.vim	/^let g:is_win = has('win32') || has('win64')$/;"	v
 g:jedi#completions_enabled	config/nvim/plugins.vim	/^    let g:jedi#completions_enabled = 0$/;"	v
 g:jedi#show_call_signatures	config/nvim/plugins.vim	/^    let g:jedi#show_call_signatures = '1'$/;"	v
 g:loaded_2html_plugin	config/nvim/variables.vim	/^let g:loaded_2html_plugin = 1$/;"	v
@@ -249,19 +332,22 @@ g:matchup_matchparen_insert_timeout	config/nvim/plugins.vim	/^let g:matchup_matc
 g:matchup_matchparen_offscreen	config/nvim/plugins.vim	/^let g:matchup_matchparen_offscreen = {'method': 'popup'}$/;"	v
 g:matchup_matchparen_timeout	config/nvim/plugins.vim	/^let g:matchup_matchparen_timeout = 100$/;"	v
 g:matchup_override_vimtex	config/nvim/plugins.vim	/^let g:matchup_override_vimtex = 1$/;"	v
+g:material_terminal_italics	config/nvim/init.vim	/^let g:material_terminal_italics = 1$/;"	v
 g:md_ctags_bin	config/nvim/plugins.vim	/^    let g:md_ctags_bin=fnamemodify(g:nvim_config_root."\/tools\/markdown2ctags.py", ":p")$/;"	v
 g:md_ctags_bin	config/nvim/plugins.vim	/^    let g:md_ctags_bin=fnamemodify(g:nvim_config_root."\\\\tools\\\\markdown2ctags.exe", ":p")$/;"	v
 g:mkdp_auto_close	config/nvim/plugins.vim	/^    let g:mkdp_auto_close = 0$/;"	v
 g:neoformat_enabled_python	config/nvim/plugins.vim	/^let g:neoformat_enabled_python = ['black', 'yapf']$/;"	v
+g:netrw_altv	config/nvim/init.vim	/^let g:netrw_altv = 1$/;"	v
+g:netrw_banner	config/nvim/init.vim	/^let g:netrw_banner = 0$/;"	v
+g:netrw_browse_split	config/nvim/init.vim	/^let g:netrw_browse_split = 4$/;"	v
+g:netrw_liststyle	config/nvim/init.vim	/^let g:netrw_liststyle = 3$/;"	v
 g:netrw_liststyle	config/nvim/variables.vim	/^let g:netrw_liststyle = 3$/;"	v
 g:netrw_nogx	config/nvim/plugins.vim	/^        let g:netrw_nogx = 1$/;"	v
-g:nvim_config_root	config/nvim/init.vim	/^let g:nvim_config_root = expand('<sfile>:p:h')$/;"	v
-g:nvim_system_wide	config/nvim/init.vim	/^        let g:nvim_system_wide = 0$/;"	v
-g:nvim_system_wide	config/nvim/init.vim	/^let g:nvim_system_wide=0$/;"	v
+g:netrw_winsize	config/nvim/init.vim	/^let g:netrw_winsize = 25$/;"	v
 g:pandoc#syntax#conceal#urls	config/nvim/plugins.vim	/^let g:pandoc#syntax#conceal#urls = 1$/;"	v
-g:python3_host_prog	config/nvim/variables.vim	/^        let g:python3_host_prog=exepath('python')$/;"	v
-g:python3_host_prog	config/nvim/variables.vim	/^        let g:python3_host_prog=substitute(exepath('python'), '.exe$', '', 'g')$/;"	v
+g:python3_host_prog	config/nvim/variables.vim	/^let g:python3_host_prog='\/usr\/bin\/python3'$/;"	v
 g:qs_highlight_on_keys	config/nvim/plugins.vim	/^let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']$/;"	v
+g:rainbow_active	config/nvim/init.vim	/^let g:rainbow_active = 1$/;"	v
 g:semshi#error_sign	config/nvim/plugins.vim	/^    let g:semshi#error_sign=v:false$/;"	v
 g:semshi#mark_selected_nodes	config/nvim/plugins.vim	/^    let g:semshi#mark_selected_nodes=0$/;"	v
 g:signify_sign_change	config/nvim/plugins.vim	/^let g:signify_sign_change = '~'$/;"	v
@@ -298,23 +384,29 @@ g:which_key_map	config/nvim/keys/which-key.vim	/^let g:which_key_map['v'] = [ '<
 g:which_key_map	config/nvim/keys/which-key.vim	/^let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]$/;"	v
 g:which_key_sep	config/nvim/keys/which-key.vim	/^let g:which_key_sep = '→'$/;"	v
 g:which_key_use_floating_win	config/nvim/keys/which-key.vim	/^let g:which_key_use_floating_win = 0$/;"	v
+g:yoinkMaxItems	config/nvim/init.vim	/^let g:yoinkMaxItems=10$/;"	v
 g:yoinkMaxItems	config/nvim/plugins.vim	/^let g:yoinkMaxItems=10$/;"	v
+g:yoinkMoveCursorToEndOfPaste	config/nvim/init.vim	/^let g:yoinkMoveCursorToEndOfPaste = 0$/;"	v
 g:yoinkMoveCursorToEndOfPaste	config/nvim/plugins.vim	/^let g:yoinkMoveCursorToEndOfPaste = 0$/;"	v
+g:yoinkSavePersistenly	config/nvim/init.vim	/^let g:yoinkSavePersistenly=1$/;"	v
 g:yoinkSavePersistenly	config/nvim/plugins.vim	/^let g:yoinkSavePersistenly=1$/;"	v
+g:yoinkSyncSystemClipboardOnFocus	config/nvim/init.vim	/^let g:yoinkSyncSystemClipboardOnFocus = 1$/;"	v
 g:yoinkSyncSystemClipboardOnFocus	config/nvim/plugins.vim	/^let g:yoinkSyncSystemClipboardOnFocus = 1$/;"	v
+gd	config/nvim/init.vim	/^nmap <silent> gd :call <SID>GoToDefinition()<CR>$/;"	m
+gd	config/nvim/init.vim	/^nmap <silent> gd <Plug>(coc-definition)$/;"	m
 gd	config/nvim/plugins.vim	/^nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>$/;"	m
-glob	install_files.py	/^import glob$/;"	i
+gi	config/nvim/init.vim	/^nmap <silent> gi <Plug>(coc-implementation)$/;"	m
 goyo_work_with_limelight	config/nvim/plugins.vim	/^augroup goyo_work_with_limelight$/;"	a
-html	config/rofi/rofi-web-search.py	/^import html$/;"	i
-httplib2	config/polybar/gmail/auth.py	/^import httplib2$/;"	i
+gr	config/nvim/init.vim	/^nmap <silent> gr <Plug>(coc-references)$/;"	m
+gy	config/nvim/init.vim	/^nmap <silent> gy <Plug>(coc-type-definition)$/;"	m
 isRunning	config/polybar/dropbox	/^function isRunning {$/;"	f
 j	config/nvim/mappings.vim	/^nnoremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')$/;"	m
-json	config/rofi/rofi-web-search.py	/^import json$/;"	i
 k	config/nvim/mappings.vim	/^nnoremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')$/;"	m
 loaded_gzip	config/nvim/variables.vim	/^let loaded_gzip = 1$/;"	v
 main	backup_files.py	/^def main():$/;"	f
 main	config/rofi/rofi-web-search.py	/^def main():$/;"	f
 main	install_files.py	/^def main():$/;"	f
+mapleader	config/nvim/init.vim	/^let mapleader = "\\<Space>"$/;"	v
 mapleader	config/nvim/variables.vim	/^let mapleader = ','$/;"	v
 matchup_matchparen_highlight	config/nvim/plugins.vim	/^augroup matchup_matchparen_highlight$/;"	a
 matchup_matchword_highlight	config/nvim/plugins.vim	/^augroup matchup_matchword_highlight$/;"	a
@@ -322,46 +414,29 @@ n	config/nvim/plugins.vim	/^    nmap n <Plug>(is-nohl)<Plug>(anzu-n-with-echo)zz
 non_utf8_file_warn	config/nvim/autocommands.vim	/^augroup non_utf8_file_warn$/;"	a
 ob	config/nvim/plugins.vim	/^        nmap ob <Plug>(openbrowser-smart-search)$/;"	m
 ob	config/nvim/plugins.vim	/^        vmap ob <Plug>(openbrowser-smart-search)$/;"	m
+oo	config/nvim/init.vim	/^nnoremap <expr> oo 'm`' . v:count1 . 'o<Esc>``'$/;"	m
 oo	config/nvim/mappings.vim	/^nnoremap <expr> oo 'm`' . v:count1 . 'o<Esc>``'$/;"	m
-os	backup_files.py	/^import os$/;"	i
-os	config/polybar/gmail/auth.py	/^import os$/;"	i
-os	config/polybar/gmail/launch.py	/^import os$/;"	i
-os	config/rofi/rofi-web-search.py	/^import os$/;"	i
-os	install_files.py	/^import os$/;"	i
+p	config/nvim/init.vim	/^nmap p <plug>(YoinkPaste_p)$/;"	m
 p	config/nvim/plugins.vim	/^nmap p <plug>(YoinkPaste_p)$/;"	m
 pandoc_syntax	config/nvim/plugins.vim	/^augroup pandoc_syntax$/;"	a
-parse	config/rofi/rofi-web-search.py	/^import urllib.parse$/;"	i
 parser	config/polybar/gmail/launch.py	/^parser = argparse.ArgumentParser()$/;"	v
-pathlib	config/polybar/gmail/auth.py	/^import pathlib$/;"	i
-pathlib	config/polybar/gmail/launch.py	/^import pathlib$/;"	i
 prepare_launcher	config/i3/shutdown_menu	/^function prepare_launcher() {$/;"	f
 python_space_error_highlight	config/nvim/syntax/python.vim	/^  let python_space_error_highlight = 1$/;"	v
 q;	config/nvim/mappings.vim	/^nnoremap q; q:$/;"	m
-re	config/rofi/rofi-web-search.py	/^import re$/;"	i
 recursive_copy	install_files.py	/^def recursive_copy(src, dst):$/;"	f
 redirect_uri	config/polybar/gmail/auth.py	/^                                                               redirect_uri=REDIRECT_URI)$/;"	v
-request	config/rofi/rofi-web-search.py	/^import urllib.request$/;"	i
 resume_edit_position	config/nvim/autocommands.vim	/^augroup resume_edit_position$/;"	a
 s:candidate_airlinetheme	config/nvim/plugins.vim	/^let s:candidate_airlinetheme = ['ayu_mirage', 'base16_flat',$/;"	v
 s:cpo_save	config/nvim/syntax/python.vim	/^let s:cpo_save = &cpo$/;"	v
 s:idx	config/nvim/plugins.vim	/^let s:idx = utils#RandInt(0, len(s:candidate_airlinetheme)-1)$/;"	v
 s:theme	config/nvim/plugins.vim	/^let s:theme = s:candidate_airlinetheme[s:idx]$/;"	v
 script2bin	config/rofi/menu/SYSTEM	/^script2bin(){$/;"	f
-shutil	backup_files.py	/^import shutil$/;"	i
-shutil	install_files.py	/^import shutil$/;"	i
+show_documentation	config/nvim/init.vim	/^function! s:show_documentation()$/;"	f
 signature_highlight	config/nvim/plugins.vim	/^augroup signature_highlight$/;"	a
-sp	config/rofi/rofi-web-search.py	/^import subprocess as sp$/;"	i
 storage	config/polybar/gmail/auth.py	/^storage = file.Storage(CREDENTIALS_PATH)$/;"	v
-subprocess	config/polybar/gmail/launch.py	/^import subprocess$/;"	i
-subprocess	config/polybar/scripts/mocp.py	/^import subprocess$/;"	i
-subprocess	config/polybar/scripts/player-moc.py	/^import subprocess$/;"	i
-sys	config/rofi/rofi-web-search.py	/^import sys$/;"	i
 term_settings	config/nvim/autocommands.vim	/^augroup term_settings$/;"	a
-time	config/polybar/gmail/launch.py	/^import time$/;"	i
 unread_prefix	config/polybar/gmail/launch.py	/^unread_prefix = '%{F' + args.color + '}' + args.prefix + ' %{F-}'$/;"	v
 update_count	config/polybar/gmail/launch.py	/^def update_count(count_was):$/;"	f
-urllib	config/rofi/rofi-web-search.py	/^import urllib.parse$/;"	i
-urllib	config/rofi/rofi-web-search.py	/^import urllib.request$/;"	i
 utils#Cabbrev	config/nvim/autoload/utils.vim	/^function! utils#Cabbrev(key, value) abort$/;"	f
 utils#HasAirlinetheme	config/nvim/autoload/utils.vim	/^function! utils#HasAirlinetheme(name) abort$/;"	f
 utils#HasColorscheme	config/nvim/autoload/utils.vim	/^function! utils#HasColorscheme(name) abort$/;"	f
@@ -370,5 +445,8 @@ utils#RandInt	config/nvim/autoload/utils.vim	/^function! utils#RandInt(Low, High
 utils#StripTrailingWhitespaces	config/nvim/autoload/utils.vim	/^function utils#StripTrailingWhitespaces() abort$/;"	f
 utils#SynGroup	config/nvim/autoload/utils.vim	/^function! utils#SynGroup() abort$/;"	f
 utils#VimFolds	config/nvim/autoload/utils.vim	/^function! utils#VimFolds(lnum)$/;"	f
-webbrowser	config/polybar/gmail/auth.py	/^import webbrowser$/;"	i
+y	config/nvim/init.vim	/^nmap y <plug>(YoinkYankPreserveCursorPosition)$/;"	m
 y	config/nvim/plugins.vim	/^nmap y <plug>(YoinkYankPreserveCursorPosition)$/;"	m
+{]	config/nvim/init.vim	/^    nmap {]  <ESC>:w<CR><ESC>:silent make<CR>:call feedkeys("\\{[")<CR>$/;"	m
+{w	config/nvim/init.vim	/^nnoremap {w :let _s=@\/<Bar>:%s\/\\s\\+$\/\/e<Bar>:let @\/=_s<Bar><CR>$/;"	m
+{{	config/nvim/init.vim	/^    nmap {{ <ESC>:w<CR><ESC>:make<CR>:cwindow<CR><CR>$/;"	m

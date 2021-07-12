@@ -10,21 +10,21 @@
 
 
   "python.autoUpdateLanguageServer": true,
-  "python.pythonPath": "/Users/junior/opt/anaconda3/bin/python3",
+  "python.pythonPath": "python3",
 
   "python.linting.enabled": true,
 
   "python.linting.pylintEnabled":true,
-  "python.linting.pylintPath":"/Users/junior/opt/anaconda3/bin/pylint",
+  "python.linting.pylintPath":"pylint",
 
   "python.linting.pylamaEnabled":true,
-  "python.linting.pylamaPath":"/Users/junior/opt/anaconda3/bin/pylama",
+  "python.linting.pylamaPath":"pylama",
 
-  "python.formatting.autopep8Path": "/Users/junior/opt/anaconda3/bin/autopep8",
+  "python.formatting.autopep8Path": "autopep8",
   "python.formatting.provider": "autopep8",
 
   "python.jediEnabled":false,
- " python.jediPath" : "/Users/junior/opt/anaconda3/jedi",
+  "python.jediPath" : "jedi",
 
   "python.venvFolders": [".venvs"],
   "python.venvPath" : "/Users/junior/opt/anaconda3",
