@@ -432,3 +432,6 @@ let g:SimpylFold_fold_import=0
 let g:SimpylFold_fold_docstring=0
 
 nnoremap \ :Rg<CR>
+
+let g:vimtex_syntax_conceal_default = 0
+

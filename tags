@@ -399,6 +399,7 @@ gi	config/nvim/init.vim	/^nmap <silent> gi <Plug>(coc-implementation)$/;"	m
 goyo_work_with_limelight	config/nvim/plugins.vim	/^augroup goyo_work_with_limelight$/;"	a
 gr	config/nvim/init.vim	/^nmap <silent> gr <Plug>(coc-references)$/;"	m
 gy	config/nvim/init.vim	/^nmap <silent> gy <Plug>(coc-type-definition)$/;"	m
+i	anaconda.sh	/^/;"	f
 isRunning	config/polybar/dropbox	/^function isRunning {$/;"	f
 j	config/nvim/mappings.vim	/^nnoremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')$/;"	m
 k	config/nvim/mappings.vim	/^nnoremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')$/;"	m
