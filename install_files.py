@@ -25,6 +25,7 @@ def main():
 
     path_config = os.path.join(user_directory, ".config")
     path_scripts = os.path.join(user_directory, ".local/bin")
+    lunarvim_scripts = os.path.join(user_directory, ".local/share")
 
     current_directory = os.getcwd()
     src_config = current_directory + "/config/"
@@ -35,6 +36,11 @@ def main():
         os.path.join(os.getcwd(), "scripts/*")
     ):  # glob permite o uso de wildcards
         shutil.copy2(files, path_scripts)
+
+    for files in glob.glob(
+        os.path.join(os.getcwd(), "lunarvim/*")
+    ):  # glob permite o uso de wildcards
+        shutil.copy2(files, lunarvim_scripts)
 
     shutil.copy2("zshrc", os.path.join(user_directory, ".zshrc"))
 

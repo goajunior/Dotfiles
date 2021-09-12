@@ -20,6 +20,9 @@ def main():
     command_copy = "cp -Rv ~/.config/nvim/ config"
     os.system(command_copy)
 
+    command_copy = "cp -Rv ~/.config/lvim/ config"
+    os.system(command_copy)
+
     command_copy = "cp -Rv ~/.config/i3/ config"
     os.system(command_copy)
 
@@ -47,6 +50,9 @@ def main():
     os.system(command_copy)
 
     command_copy = "cp -v ~/.local/bin/setbg scripts"
+    os.system(command_copy)
+
+    command_copy = "cp -Rv ~/.local/share/lunarvim/ lunarvim"
     os.system(command_copy)
 
 

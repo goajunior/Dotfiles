@@ -54,8 +54,7 @@ POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
 POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context battery dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time dir_writable ip ram load background_jobs vi_mode)
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time dir_writable ip custom_wifi_signal ram load background_jobs vi_mode)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time dir_writable ip custom_wifi_signal ram load background_jobs vi_mode)
 
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 
@@ -99,13 +98,10 @@ INTERACTIVECOMMENTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #
-plugins=(git colorize gnu-utils brew history history-substring-search docker autojump vi-mode  dirhistory pip python thefuck web-search zsh-autosuggestions colored-man-pages copydir) 
-
-zmodload -ap zsh/mapfile mapfile
-
+plugins=(git colorize gnu-utils brew history history-substring-search docker autojump vi-mode  dirhistory pip python thefuck web-search zsh-autosuggestions) 
 
 export PATH=/usr/local/bin:$PATH:/usr/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/git/bin:/System/Library/Perl/Extras/5.8.6:/Library/Perl/5.8.1:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/texlive/2013/bin/universal-darwin:~/Library/Mathematica/Applications:~/code/Mathematica:/usr/local/ff++/openmpi/3.47/bin
-export PATH=$PATH:/Applications/Mathematica.app/Contents/MacOS:/usr/local/bin:/home/junior/.local/bin
+export PATH=$PATH:/Applications/Mathematica.app/Contents/MacOS:/usr/local/bin:/home/junior/.local/bin:/Users/junior/.local/bin:/Users/junior/.cabal/bin
 
 source $ZSH/oh-my-zsh.sh
 
@@ -122,7 +118,6 @@ export DYLD_LIBRARY_PATH=/usr/local/cuda/lib/:$DYLD_LIBRARY_PATH
 export TERM="xterm-256color"
 export box_name='rmbpro'
 export FZF_DEFAULT_COMMAND='ag -g ""'
-PROMPT_COMMAND='echo -ne "\033]0;${USER}: ${PWD}\007"'
 #
 #
 set -o vi
@@ -140,18 +135,17 @@ utf8()
 	    rm $1
 		    mv $1.tmp $1
 			}
-alias ls=exa
 alias apps='open /Applications'
-# alias gh='/Applications/Github\ Desktop.app; open .; cd -'
+alias gh='/Applications/Github\ Desktop.app; open .; cd -'
 alias ffp='freefem++'
 alias killstatus='killall -KILL SystemUIServer'
 
-alias v=nvim
-alias vim=nvim
+alias v=lvim
+alias vim=lvim
 # alias gh=github
 # alias j=autojump
-alias vimv='nvim ~/.config/nvim/init.vim'
-alias vimz='nvim ~/.zshrc'
+alias vimv='lvim ~/.config/lvim/config.lua'
+alias vimz='lvim ~/.zshrc'
 alias vimi3='vim ~/.config/i3/config'
 alias vimfc='vim ~/.fvwm/config'
 alias rm='rm -v'
@@ -177,14 +171,13 @@ alias ff++='FreeFem++'
 # alias tmux='TERM=xterm-256color tmux -2'
 alias tmuxinator='TERM=xterm-256color tmuxinator'
 # alias mux='TERM=xterm-256color mux'
-alias octave='octave-cli'
+# alias octave='octave-cli'
 alias vimt='vim ~/.tmux.conf'
 alias vimd='vim ~/code/Docker/Dockerfile'
 alias ms='MathematicaScript'
 alias hsn='h|grep'
-alias dockerm='docker run -p 8888:8888  -v ~/container:/home/jovyan/work -it wolfram-jupyter'
-alias exa='exa --group-directories-first --icons'
-alias startdocker="sudo systemctl start docker.service"
+alias dockerm='docker run -u junior -t -i minha_imagem:v1'
+alias ag='ag --nobreak --nonumbers --noheading . | fzf'
 # alias ack='ack --pager="less -FRSX"'
 
 CTAGS=--langmap=fortran:+.f90
@@ -234,61 +227,48 @@ zle -N zle-keymap-select
 # Set the prompt to “[user]@[host[ [vi mode] $ ”
 # PROMPT="%n@%m ${VIMODE} \\$ "
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-sc() {find  ~/Documents/code/ ~/Dropbox/code/ -regex '.*\.\(py\|for\|c\|f\|h\|edp\)'  | fzf | xargs  nvim ;}
-# open() {fd -t f | fzf |xargs -0 -n 1 xdg-open </dev/null >/dev/null 2>&1 ;} 
-open() {fd -t f -H -I | fzf -m --preview="pistol {}" | xargs -ro -d "\n" xdg-open 2>&-}
-cdf() {
-    cd $HOME && cd "$(fd -t d | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)"
-}
-si() {ack -l -m 20 "$1"  ~/Documents/code ~/Dropbox/code/| fzf | xargs nvim ;}
-pacs() {
-    sudo pacman -Syy $(pacman -Ssq | fzf -m --preview="pacman -Si {}" --preview-window=:hidden --bind=space:toggle-preview)
-}
+sc() {find  -E ~/Documents/code/ ~/Dropbox/code/ -regex '.*\.(py|for|c|f|h|edp)'  | fzf | xargs  nvim ;}
+# sc() {find  ~/Documents/code/ ~/Dropbox/code/ -regex '.*\.\(py\|for\|c\|f\|h\|edp\)'  | fzf | xargs  nvim ;}
+si() {ack -l -m 20 "$1"  ~/Docuemnts/code ~/Dropbox/code/| fzf | xargs nvim ;}
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 	        source /etc/profile.d/vte.sh
 fi
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+p () {
+    local open
+    open=open   # on OSX, "open" opens a pdf in preview
+    # ag  -g ".pdf$" \
+    find  -E ~/Documents/ ~/Dropbox/ ~/Downloads/ -regex '.*\.(pdf|pdf)' \
+    | fast-p \
+    | fzf --read0 --reverse -e -d $'\t'  \
+        --preview-window down:80% --preview '
+            v=$(echo {q} | gtr " " "|"); 
+            echo -e {1}"\n"{2} | ggrep -E "^|$v" -i --color=always;
+        ' \
+    | gcut -z -f 1 -d $'\t' | gtr -d '\n' | gxargs -r --null $open > /dev/null 2> /dev/null
+}
 
 j() {
     if [[ "$#" -ne 0 ]]; then
         cd $(autojump $@)
         return
     fi
-    cd "$(autojump -s | sort -k1gr | awk '$1 ~ /[0-9]:/ && $2 ~ /^\// { for (i=2; i<=NF; i++) { print $(i) } }' |  fzf --height 60% --reverse --inline-info)" 
+    cd "$(autojump -s | sort -k1gr | awk '$1 ~ /[0-9]:/ && $2 ~ /^\// { for (i=2; i<=NF; i++) { print $(i) } }' |  fzf --height 40% --reverse --inline-info)" 
 }
-p () {
-    open=xdg-open   # this will open pdf file withthe default PDF viewer on KDE, xfce, LXDE and perhaps on other desktops.
 
-    ag -U -g ".pdf$" \
-    | fast-p \
-    | fzf --read0 --reverse -e -d $'\t'  \
-        --preview-window down:80% --preview '
-            v=$(echo {q} | tr " " "|"); 
-            echo -e {1}"\n"{2} | grep -E "^|$v" -i --color=always;
-        ' \
-    | cut -z -f 1 -d $'\t' | tr -d '\n' | xargs -r --null $open > /dev/null 2> /dev/null
-}
-# Import colorscheme from 'wal' asynchronously
-# &   # Run the process in the background.
-# ( ) # Hide shell job control messages.
-(cat ~/.cache/wal/sequences &)
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/junior/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/junior/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/junior/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/junior/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
-# Alternative (blocks terminal for 0-3ms)
-cat ~/.cache/wal/sequences
-
-# To add support for TTYs this line can be optionally added.
-source ~/.cache/wal/colors-tty.sh
-
-alias covid19='watch -c -n600 "curl -s -L covid19.trackercli.com/Brazil"'
-fb() {
-    # save newline separated string into an array
-    mapfile -t website <<< "$(buku -p -f 5 | column -ts$'\t' | fzf --multi)"
-
-    # open each website
-    for i in "${website[@]}"; do
-        index="$(echo "$i" | awk '{print $1}')"
-        buku -p "$index"
-        buku -o "$index"
-    done
-}
-eval "$(gh completion -s zsh)"
