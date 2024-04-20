@@ -14,6 +14,10 @@ def main():
     )
 
     shutil.copy2(
+        os.path.join(user_directory, ".zimrc"), "zimrc",
+    )
+
+    shutil.copy2(
         os.path.join(user_directory, ".ackrc"), "ackrc",
     )
 
