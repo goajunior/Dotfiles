@@ -48,8 +48,8 @@ lvim.plugins = {
     event = "BufRead",
     config = function()
       require("hop").setup()
-      vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
-      vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
+      -- vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
+      -- vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
     end,
   },
   { 'ethanholz/nvim-lastplace' },
@@ -92,6 +92,15 @@ lvim.plugins = {
   },
   {
     'navarasu/onedark.nvim'
+  },
+  {
+    'stevearc/aerial.nvim'
+  },
+  {
+    'nvim-focus/focus.nvim',
+    config = function()
+      require("focus").setup()
+    end
   }
   -- {
   --   "SmiteshP/nvim-navbuddy",
@@ -156,6 +165,12 @@ lvim.keys.normal_mode["<Leader>tg"] = ":Telescope live_grep<CR>"
 lvim.keys.normal_mode["<Leader>hc"] = ":HopChar1<CR>"
 lvim.keys.normal_mode["<Leader>hl"] = ":HopLine<CR>"
 
+local vim = vim
+local opt = vim.opt
+
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+
 local init_custom_options = function()
   local custom_options = {
     relativenumber = true, -- Set relative numbered lines
@@ -167,3 +182,13 @@ local init_custom_options = function()
   end
 end
 init_custom_options()
+require("aerial").setup({
+  -- optionally use on_attach to set keymaps when aerial has attached to a buffer
+  on_attach = function(bufnr)
+    -- Jump forwards/backwards with '{' and '}'
+    vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
+    vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
+  end,
+})
+-- You probably also want to set a keymap to toggle aerial
+lvim.keys.normal_mode["<leader>a"] =  ":AerialToggle!<CR>"
