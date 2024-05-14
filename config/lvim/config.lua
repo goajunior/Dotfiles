@@ -97,11 +97,18 @@ lvim.plugins = {
     'stevearc/aerial.nvim'
   },
   {
-    'nvim-focus/focus.nvim',
-    config = function()
-      require("focus").setup()
-    end
-  }
+  "rawnly/gist.nvim",
+  config = function() require("gist").setup() end,
+  -- `GistsList` opens the selected gif in a terminal buffer,
+  -- this plugin uses neovim remote rpc functionality to open the gist in an actual buffer and not have buffer inception
+  dependencies = { "samjwill/nvim-unception", setup = function() vim.g.unception_block_while_host_edits = true end }
+},
+  -- {
+  --   'nvim-focus/focus.nvim',
+  --   config = function()
+  --     require("focus").setup()
+  --   end
+  -- }
   -- {
   --   "SmiteshP/nvim-navbuddy",
   --   dependencies = {
@@ -169,7 +176,7 @@ local vim = vim
 local opt = vim.opt
 
 opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 local init_custom_options = function()
   local custom_options = {
@@ -192,3 +199,5 @@ require("aerial").setup({
 })
 -- You probably also want to set a keymap to toggle aerial
 lvim.keys.normal_mode["<leader>a"] =  ":AerialToggle!<CR>"
+
+ vim.g.unception_block_while_host_edits = true
