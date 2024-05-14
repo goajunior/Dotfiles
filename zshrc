@@ -287,7 +287,7 @@ utf8()
 		    mv $1.tmp $1
 			}
 alias apps='open /Applications'
-alias gh='/Applications/Github\ Desktop.app; open .; cd -'
+# alias gh='/Applications/Github\ Desktop.app; open .; cd -'
 alias ffp='freefem++'
 alias killstatus='killall -KILL SystemUIServer'
 
@@ -439,7 +439,8 @@ fi
 
  # zsh
   eval "$(fzf --zsh)"
-source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
+
+  # source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
