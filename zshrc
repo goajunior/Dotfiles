@@ -269,6 +269,7 @@ export DYLD_LIBRARY_PATH=/usr/local/cuda/lib/:$DYLD_LIBRARY_PATH
 export TERM="xterm-256color"
 export box_name='rmbpro'
 export FZF_DEFAULT_COMMAND='ag -g ""'
+export ML_PATH=/Users/junior/code/estudos/hands-on-ml
 #
 #
 set -o vi
@@ -291,12 +292,12 @@ alias apps='open /Applications'
 alias ffp='freefem++'
 alias killstatus='killall -KILL SystemUIServer'
 
-alias v=lvim
-alias vim=lvim
+alias v=nvim
+alias vim=nvim
 alias ls='lsd'
 # alias gh=github
 # alias j=autojump
-alias vimv='vim ~/.config/lvim/config.lua' 
+alias vimv='vim ~/.config/nvim/config.lua' 
 alias vimz='vim ~/.zshrc'
 alias vimi3='vim ~/.config/i3/config'
 alias vimfc='vim ~/.fvwm/config'
@@ -310,8 +311,6 @@ alias py3='python3'
 alias py2='python2'
 alias py='python'
 alias ipy3='ipython3'
-eval $(thefuck --alias)
-alias f='fuck'
 alias zshr='source ~/.zshrc'
 alias gits='git status'
 alias dockerd='eval "$(docker-machine env default)"'
@@ -320,6 +319,7 @@ alias bupd='brew update'
 alias bupg='brew upgrade'
 alias cl='clear'
 alias ff++='FreeFem++'
+alias f='fuck'
 # alias tmux='TERM=xterm-256color tmux -2'
 alias tmuxinator='TERM=xterm-256color tmuxinator'
 # alias mux='TERM=xterm-256color mux'
@@ -436,9 +436,10 @@ fi
 # }
 
 # zle -N zle-line-init
-
+eval $(thefuck --alias)
  # zsh
   eval "$(fzf --zsh)"
+
 
   # source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
 
